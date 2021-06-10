@@ -28,11 +28,11 @@ import ViewSource from '@components/view-source';
 import BackgroundSlider from 'react-background-slider'
 
 
-import image1 from '../public/bakgrunn1.jpg';
+import image1 from '../public/bakgrunn5.jpg';
 import image2 from '../public/bakgrunn2.jpg';
 import image3 from '../public/bakgrunn3.jpg';
 import image4 from '../public/bakgrunn4.jpg';
-import image5 from '../public/bakgrunn5.jpg';
+import image5 from '../public/bakgrunn1.jpg';
 import image6 from '../public/bakgrunn6.jpg';
 import image7 from '../public/bakgrunn7.jpg';
 import image8 from '../public/bakgrunn8.jpg';
