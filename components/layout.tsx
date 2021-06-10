@@ -113,7 +113,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
   );
 }
 
-function shuffle(array) {
+function shuffle(array:string[]) {
   var currentIndex = array.length,  randomIndex;
 
   // While there remain elements to shuffle...
