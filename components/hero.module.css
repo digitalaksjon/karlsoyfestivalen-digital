@@ -25,13 +25,13 @@
   font-weight: 700;
   text-align: center;
   margin: 0 0 25px;    
-  text-shadow: 1px 1px #FDFBF9;
-  color: #F0604C;
+  text-shadow: 1px 1px #433B35;
+  color: #FDFBF9;
 }
 
 .hero span {
     font-size: 60px;
-    text-shadow: 1px 1px #F0604C;
+    text-shadow: 1px 1px #433B35;
     color: #FDFBF9;
   }
 
