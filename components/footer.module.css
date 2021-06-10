@@ -5,12 +5,12 @@
   line-height: 1.5;
   display: flex;
   justify-content: center;
-  color: var(--secondary-color);
-  z-index: 2;
+  color: #fff;
+  z-index: 100;
 }
 
 .footer-link {
-  color: var(--secondary-color);
+  color: #F0604C;
   font-size: 12px;
   transition: color 0.2s ease;
 }
