@@ -27,7 +27,10 @@ import Footer, { HostedByVercel } from './footer';
 import ViewSource from '@components/view-source';
 import BackgroundSlider from 'react-background-slider'
 
-
+declare module "*.jpg" {
+  const value: any;
+  export = value;
+}
 
 
 import image1 from '../public/bakgrunn1.jpg';

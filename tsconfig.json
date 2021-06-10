@@ -14,6 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "typeRoots" : ["node_modules/@types", "components"],
     "paths": {
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
