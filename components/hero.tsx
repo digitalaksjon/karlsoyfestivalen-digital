@@ -34,7 +34,7 @@ export default function Hero() {
       </h2>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
         {BRAND_NAME}
-        <br className={styleUtils['show-on-desktop']} /> <span>En global digital festival</span>
+        <br className={styleUtils['show-on-desktop']} /> <span>en global digital festival</span>
       </h1>
       <h2
         className={cn(
