@@ -24,13 +24,15 @@
 .streamContainer {
   width: 100%;
   padding: 0;
+  background-color: #fff;
   min-height: 400px;
   height: 100%;
+
 }
 
 .stream {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
 }
 

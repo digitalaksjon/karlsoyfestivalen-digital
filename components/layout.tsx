@@ -21,9 +21,18 @@ import { SkipNavContent } from '@reach/skip-nav';
 import { NAVIGATION } from '@lib/constants';
 import styles from './layout.module.css';
 import Logo from './icons/icon-logo';
+import EventName from './event-name';
 import MobileMenu from './mobile-menu';
 import Footer, { HostedByVercel } from './footer';
 import ViewSource from '@components/view-source';
+import BackgroundSlideshow from 'react-background-slideshow'
+
+
+import image2 from '../public/bakgrunn2.jpg';
+import image3 from '../public/bakgrunn3.jpg';
+import image4 from '../public/bakgrunn4.jpg';
+import image5 from '../public/bakgrunn5.jpg';
+import image6 from '../public/bakgrunn6.jpg';
 
 type Props = {
   children: React.ReactNode;
@@ -36,6 +45,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
   const router = useRouter();
   const activeRoute = router.asPath;
 
+  
   return (
     <>
       <ViewSource />
@@ -51,6 +61,9 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
                 </a>
               </Link>
             </div>
+            <div className={styles.eventName}>
+              <EventName />
+            </div>
             <div className={styles.tabs}>
               {NAVIGATION.map(({ name, route }) => (
                 <Link key={name} href={route}>
@@ -65,14 +78,24 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
               ))}
             </div>
             <div className={cn(styles['header-right'])}>
-              <HostedByVercel />
+         
             </div>
           </header>
         )}
         <div className={styles.page}>
           <main className={styles.main} style={layoutStyles}>
             <SkipNavContent />
-            <div className={cn(styles.full, className)}>{children}</div>
+            <div className={cn(styles.full, className)}>
+            
+              {(activeRoute === '/') ? 
+                (
+                  <BackgroundSlideshow images={[image3, image4, image2, image5, image6 ]}/>
+
+                ):
+                ''
+              }
+               {children}
+              </div>
           </main>
           {!activeRoute.startsWith('/stage') && <Footer />}
         </div>

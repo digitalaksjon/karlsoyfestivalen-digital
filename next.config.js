@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+
  // Let's you access Sanity Studio on /studio on the main site
  const STUDIO_REWRITE = {
    source: '/studio/:path*',
@@ -23,10 +24,11 @@
        : '/studio/index.html'
  };
 
-module.exports = {
+const withImages = require('next-images')
+module.exports = withImages({
   images: {
     domains: ['cdn.sanity.io'],
     imageSizes: [24, 64, 300]
   },
-  rewrites: () => [STUDIO_REWRITE]
-};
+  rewrites: () => [STUDIO_REWRITE],
+})

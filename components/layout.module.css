@@ -15,8 +15,8 @@
  */
 
 .background {
-  background: #000;
-  color: #fff;
+  background: #FDFBF9;
+  color: #433B35;
   min-height: 100vh;
   min-height: var(--100vh);
   display: flex;
@@ -39,6 +39,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
+}
+
+.box-gallery {
+  z-index: 10;
 }
 
 .header {
@@ -48,7 +53,7 @@
   background: var(--sidebar);
   border-bottom: 1px solid var(--accents-7);
   height: var(--header-height);
-  z-index: 2;
+  z-index: 50;
 }
 
 .header-logos {
@@ -113,5 +118,19 @@
 
 .logo {
   display: flex;
-  width: 40px;
+  width: 60px;
+
+}
+
+.eventName {
+  color: #fff;
+  margin-left: 0;
+  margin-right: auto;  
+}
+
+.eventName h1 {
+  font-size: 1.2em;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  font-weight: 700;
 }

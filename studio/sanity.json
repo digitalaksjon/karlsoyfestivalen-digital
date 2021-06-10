@@ -5,8 +5,8 @@
     "basePath": "/studio"
   },
   "api": {
-    "projectId": "jmhf2rn8",
-    "dataset": "nextjs-conference"
+    "projectId": "y36fur6j",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

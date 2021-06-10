@@ -52,10 +52,10 @@
   --accents-8: #111111;
 
   --gray: #252729;
-  --secondary-color: #8a8f98;
-  --sidebar: #0e0e10;
+  --secondary-color: #F0604C;
+  --sidebar: #433B35;
   --header-height: 72px;
-  --brand: #845ef7;
+  --brand: #F0604C;
 }
 
 html {
@@ -94,8 +94,8 @@ body {
 }
 html,
 body {
-  color: #fff;
-  background-color: #111;
+  color: #111;
+  background-color: #fff;
 }
 ::selection {
   background-color: #0070f3;

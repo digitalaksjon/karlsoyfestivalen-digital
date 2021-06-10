@@ -17,6 +17,9 @@
 .container {
   margin: auto 0;
   padding: 0 var(--space-4x);
+  z-index: 100;
+
+
 }
 
 @media (min-width: 768px) {
