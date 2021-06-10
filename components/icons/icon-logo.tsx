@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
- import Image from 'next/image';
+type Props = { color: string; height?: number | string };
+
+import Image from 'next/image';
 
 export default function IconLogo({
   backgroundColor = 'transparent',
   foregroundColor = 'var(--accents-1)',
-  ...props
+  ...Props
 }) {
   return (
       <Image
