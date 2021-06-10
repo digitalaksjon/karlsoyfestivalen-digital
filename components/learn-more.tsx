@@ -22,11 +22,7 @@ import { REPO } from '@lib/constants';
 export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
-      Les mer på {' '}
-      <a href="https://www.karlsoyfestivalen.no" className={styles['contact-email']} target="_blank" rel="noopener noreferrer">
-      www.karlsoyfestivalen.no
-      </a>
-      .
+
     </div>
   );
 }

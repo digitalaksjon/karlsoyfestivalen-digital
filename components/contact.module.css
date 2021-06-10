@@ -18,6 +18,13 @@
   text-align: center;
   color: var(--secondary-color);
   margin-bottom: var(--space-12x);
+  background-color:rgba(255,255,255,0.9);
+  margin: 0 auto;
+  width: 30%;
+}
+
+.contact a {
+  color: #F0604C;
 }
 
 .contact-email {

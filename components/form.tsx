@@ -142,7 +142,7 @@ export default function Form({ sharePage }: Props) {
             onChange={e => setEmail(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Skriv e-post for å motta oppdateringer "
+            placeholder="Skriv inn e-post for å melde deg på"
             aria-label="Your email address"
             required
           />

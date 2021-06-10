@@ -47,7 +47,7 @@
 }
 
 .input::placeholder {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .input-label {
@@ -132,7 +132,7 @@
 
 .submit.default:hover,
 .submit.default:focus {
-  background: black;
+  background: #FDFBF9;
   color: var(--brand);
 }
 
