@@ -30,8 +30,9 @@
   text-shadow: 2px 2px #FDFBF9;
   color: #F0604C;
   background-color: rgba(67, 59, 53,0.4);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   padding: 30px 0;
+  border:5px dashed #FDFBF9;
   
   
 }
