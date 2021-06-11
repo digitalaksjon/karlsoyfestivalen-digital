@@ -16,27 +16,49 @@
 
 .wrapper {
   margin-top: var(--space-12x);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero {
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1.15;
   letter-spacing: -0.05em;
   font-weight: 700;
   text-align: center;
   margin: 0 0 25px;    
-  text-shadow: 5px 5px #FDFBF9;
+  text-shadow: 2px 2px #FDFBF9;
   color: #F0604C;
+  background-color: rgba(67, 59, 53,0.4);
+  backdrop-filter: blur(3px);
+  padding: 30px 0;
+  
+  
 }
 
 .hero span {
-    font-size: 50px;
+    font-size: 0.8em;
     text-shadow: 3px 3px #433B35;
     color: #FDFBF9;
+    letter-spacing: 0.4px;
+    width: 100%;
+    display: block;
+    margin: 40px auto;
   }
 
+  .hero div {
+    font-size: 0.5em;
+    text-shadow: 2px 2px #433B35;
+    color: #FDFBF9;
+    letter-spacing: 0.4px;
+    width: 80%;
+    display: block;
+    margin: 40px auto;
+  }
+
+
 .info {
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.4;
   text-transform: uppercase;
   display: flex;
@@ -45,19 +67,21 @@
   margin-bottom: var(--space-8x);
   color: #FDFBF9;
   background-color: #F0604C;
-  width:40%;
+  width:100%;
   margin: 0 auto;
 
 }
 
 .description {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.4;
   text-align: center;
-  margin: auto auto 30px;
+  margin: 30px auto 30px;
   color: var(--secondary-color);
   max-width: 355px;
+  background-color:#FDFBF9;
+  width: 100%;
   
 }
 
@@ -72,17 +96,44 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
+
+  .wrapper {
+    margin-top: var(--space-12x);
+    width: 80%;
+    margin: 0 auto;
+  }
   .hero {
-    font-size: 100px;
+    font-size: 120px;
     line-height: 1;
     font-weight: 800;
     margin: 0 0px 40px;
+    text-shadow: 5px 5px #FDFBF9;
+  }
+
+
+  .hero span {
+    font-size: 0.6em;
+    text-shadow: 3px 3px #433B35;
+
+  }
+
+  .hero div {
+    font-size: 0.35em;
+    text-shadow: 2px 2px #433B35;
+    color: #FDFBF9;
+    letter-spacing: 0.6px;
+    line-height: 1.2em;
+    width: 80%;
+    display: block;
+    margin: 40px auto;
   }
 
   .info {
     font-size: 24px;
     margin-bottom: 80px;
+    width: 40%;
+    
   }
 
   .description {

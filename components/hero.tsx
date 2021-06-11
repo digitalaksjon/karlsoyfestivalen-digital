@@ -34,7 +34,8 @@ export default function Hero() {
       </h2>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
         {BRAND_NAME}
-        <br className={styleUtils['show-on-desktop']} /> <span>en global digital festival</span>
+        <br className={styleUtils['show-on-desktop']} /> <span>Mari Boine / Isák / Polardegos</span>
+        <div>Ohnesorg / Karlsøy Prestegaard / Roastfish & Cornbread Sound System / One Family / Kunstkollektivet Støy / Barnemakt / Slampoesi / Galleri Carlsö / Jemterud + Brungot Trio / Bens Bluesband / Barnas Gourmetkjøkken / Filmverksted / Plantesafari / Marinert lammekjøtt / Folkekjøkken / OLi OOO Village CarlsØ </div>
       </h1>
       <h2
         className={cn(
@@ -50,7 +51,7 @@ export default function Hero() {
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
-          <strong>Online</strong>
+          <strong>PÅ INTERNETT</strong>
         </p>
       </div>
     </div>
