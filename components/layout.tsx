@@ -52,7 +52,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
   const router = useRouter();
   const activeRoute = router.asPath;
 
-  
+
   return (
     <>
       <ViewSource />
@@ -85,7 +85,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
               ))}
             </div>
             <div className={cn(styles['header-right'])}>
-         
+
             </div>
           </header>
         )}
@@ -93,18 +93,18 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
           <main className={styles.main} style={layoutStyles}>
             <SkipNavContent />
             <div className={cn(styles.full, className)}>
-            
-              {(activeRoute === '/') ? 
+
+              {(activeRoute === '/') ?
                 (
-                                    
+
                   <BackgroundSlider
                     images={randomImageArray}
                     duration={8} transition={1} />
-                ):
+                ) :
                 ''
               }
-               {children}
-              </div>
+              {children}
+            </div>
           </main>
           {!activeRoute.startsWith('/stage') && <Footer />}
         </div>
@@ -113,8 +113,8 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
   );
 }
 
-function shuffle(array:string[]) {
-  var currentIndex = array.length,  randomIndex;
+function shuffle(array: string[]) {
+  var currentIndex = array.length, randomIndex;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {

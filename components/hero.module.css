@@ -32,7 +32,8 @@
   background-color: rgba(67, 59, 53,0.4);
   backdrop-filter: blur(5px);
   padding: 30px 0;
-  border:5px dashed #FDFBF9;
+  border:2px solid #FDFBF9;
+  border-radius:10px;
   
   
 }
@@ -49,7 +50,7 @@
 
   .hero div {
     font-size: 0.5em;
-    text-shadow: 2px 2px #433B35;
+    text-shadow: 2px 2px #F0604C;
     color: #FDFBF9;
     letter-spacing: 0.4px;
     width: 80%;
@@ -109,23 +110,24 @@
     line-height: 1;
     font-weight: 800;
     margin: 0 0px 40px;
-    text-shadow: 5px 5px #FDFBF9;
+    text-shadow: 6px 6px #FDFBF9;
   }
 
 
   .hero span {
-    font-size: 0.6em;
-    text-shadow: 3px 3px #433B35;
+    font-size: 0.5em;
+    text-shadow: 3px 3px #F0604C;
 
   }
 
   .hero div {
-    font-size: 0.35em;
+    font-size: 0.3em;
     text-shadow: 2px 2px #433B35;
     color: #FDFBF9;
     letter-spacing: 0.6px;
     line-height: 1.2em;
     width: 80%;
+    font-weight: 500;
     display: block;
     margin: 40px auto;
   }
@@ -141,5 +143,6 @@
     font-size: var(--space-8x);
     max-width: 531px;
     margin: 40px auto;
+    
   }
 }

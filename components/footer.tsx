@@ -26,8 +26,7 @@ export default function Footer() {
           <div className={styles['footer-separator']} />
         </div>
         <div className={styles['footer-copyright']}>
-          Copyright © {`${new Date().getFullYear()} `} {COPYRIGHT_HOLDER || `${SITE_NAME}.`} All
-          rights reserved.
+          {`${new Date().getFullYear()} `} {COPYRIGHT_HOLDER || `${SITE_NAME}.`}
         </div>
         <div className={styles['footer-center-group']}>
           <p className={styles['footer-paragraph']}>
