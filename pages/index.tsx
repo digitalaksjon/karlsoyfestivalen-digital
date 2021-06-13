@@ -21,6 +21,7 @@ import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
 //const Instagram = require('instagram-web-api')
+import image1 from '../public/bakgrunn5.jpg';
 
 // import InstagramFeed from '../components/instagramfeed';
 
@@ -32,7 +33,8 @@ export default function Conf({ instagramPosts}: ConfProps) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
-    description: META_DESCRIPTION
+    description: META_DESCRIPTION,
+    image: image1
   };
   const ticketNumber = query.ticketNumber?.toString();
   const defaultUserData = {
