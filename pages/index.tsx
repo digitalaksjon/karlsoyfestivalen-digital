@@ -23,8 +23,11 @@ import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
 import Instagram from "instagram-web-api"
 import InstagramFeed from '../components/instagramfeed';
 
+export interface ConfProps {
+  instagramPosts: object[];
+}
 
-export default function Conf({ instagramPosts }) {
+export default function Conf({ instagramPosts}: ConfProps) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
@@ -46,9 +49,6 @@ export default function Conf({ instagramPosts }) {
         defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
       />
       <InstagramFeed instagramPosts={instagramPosts} />
-
-
-
 
     </Page >
   );

@@ -1,7 +1,11 @@
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
 
+export interface InstagramFeedProps {
+    instagramPosts: object[];
+}
 
-export default function InstagramFeed({ instagramPosts }) {
+export default function InstagramFeed({ instagramPosts }:InstagramFeedProps) {
 
     return (
         <>
@@ -16,12 +20,13 @@ export default function InstagramFeed({ instagramPosts }) {
                 }
 
 
-                {instagramPosts.map && instagramPosts.map(({ node }, i) => {
+                {instagramPosts.map(({ node }, i) => {
+                    console.log(instagramPosts)
                     return (
                         // let's wrap each post in an anchor tag
                         // and construct the url for the post using
                         // the shortcode that was returned from the API
-                        <li>asda
+                        <li>
                             <a
                                 href={`https://www.instagram.com/p/${node.shortcode}`}
                                 key={i}
@@ -29,7 +34,7 @@ export default function InstagramFeed({ instagramPosts }) {
                             >
                                 {/* set the image src equal to the image
                 url from the Instagram API*/}
-                                <img
+                                <Image
                                     src={node.thumbnail_src}
                                     alt={
                                         // the caption with hashtags removed
@@ -37,7 +42,9 @@ export default function InstagramFeed({ instagramPosts }) {
                                             .replace(/(#\w+)+/g, "")
                                             .trim()
                                     }
-                                />
+                              
+                                    />
+                      
                             </a>
                         </li>
                     )
