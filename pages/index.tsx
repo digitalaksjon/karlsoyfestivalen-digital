@@ -20,11 +20,12 @@ import { SkipNavContent } from '@reach/skip-nav';
 import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
-import Instagram from "instagram-web-api"
+const Instagram = require('instagram-web-api')
+
 import InstagramFeed from '../components/instagramfeed';
 
 export interface ConfProps {
-  instagramPosts: object[];
+  instagramPosts: any[];
 }
 
 export default function Conf({ instagramPosts}: ConfProps) {
@@ -78,7 +79,7 @@ export async function getStaticProps() {
       //  update the posts to be equal
       // to the edges that were returned from the instagram API response
       posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-      console.log(posts)
+
     }
   } catch (err) {
     console.log(

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export interface InstagramFeedProps {
-    instagramPosts: object[];
+    instagramPosts: any[];
 }
 
 export default function InstagramFeed({ instagramPosts }:InstagramFeedProps) {
@@ -16,7 +16,7 @@ export default function InstagramFeed({ instagramPosts }:InstagramFeedProps) {
 
                 }
 
-                {instagramPosts.map((node, i) => {
+                {instagramPosts.map(({ node }, i) => {
           
                     return (
                         // let's wrap each post in an anchor tag
@@ -38,6 +38,9 @@ export default function InstagramFeed({ instagramPosts }:InstagramFeedProps) {
                                             .replace(/(#\w+)+/g, "")
                                             .trim()
                                     }
+                                    width={200}
+                                    height={200}
+                                    
                               
                                     />
                       

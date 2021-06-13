@@ -48,7 +48,7 @@ type Props = {
   layoutStyles?: any;
 };
 
-export default function Layout({ children, className, hideNav, layoutStyles, instagramPosts, props }: Props) {
+export default function Layout({ children, className, hideNav, layoutStyles }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
 
