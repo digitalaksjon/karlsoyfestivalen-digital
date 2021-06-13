@@ -20,9 +20,9 @@ import { SkipNavContent } from '@reach/skip-nav';
 import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
-const Instagram = require('instagram-web-api')
+//const Instagram = require('instagram-web-api')
 
-import InstagramFeed from '../components/instagramfeed';
+// import InstagramFeed from '../components/instagramfeed';
 
 export interface ConfProps {
   instagramPosts: any[];
@@ -49,13 +49,12 @@ export default function Conf({ instagramPosts}: ConfProps) {
         defaultUserData={defaultUserData}
         defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
       />
-      <InstagramFeed instagramPosts={instagramPosts} />
 
     </Page >
   );
 }
 
-
+/*
 
 export async function getStaticProps() {
 
@@ -94,4 +93,4 @@ export async function getStaticProps() {
       instagramPosts: posts, // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
     },
   }
-}
+}*/
