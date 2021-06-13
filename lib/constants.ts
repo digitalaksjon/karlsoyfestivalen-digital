@@ -5,7 +5,7 @@ export const BRAND_NAME = 'Karlsøyfestivalen 2021';
 export const SITE_NAME_MULTILINE = ['Karlsøyfestivalen', 'Conf'];
 export const SITE_NAME = 'Karlsøyfestivalen Digital';
 export const META_DESCRIPTION =
-  'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
+  'Karlsøyfestivalne er en global digital festival med mening!';
 export const SITE_DESCRIPTION =
   'Velkommen tilbake til Karlsøya!';
 export const DATE = '5. - 8. august 2021';
