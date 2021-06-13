@@ -1,17 +1,12 @@
 import Link from "next/link"
 
 
-export default function InstagramFeed({ instagramPosts }) {
-
+export default function InstagramFeed(instagramPosts: []) {
 
     return (
         <>
-            <h2>
-                <a href="https://www.instagram.com/yourinstagramhandle/">
-                    Følg Karlsøyfestivalen på Insta
-        </a>
-        .
-      </h2>
+
+
 
             <ul>
                 {/* let's iterate through each of the
@@ -20,7 +15,8 @@ export default function InstagramFeed({ instagramPosts }) {
 
                 }
 
-                {instagramPosts.map(({ node }, i) => {
+
+                {instagramPosts.map && instagramPosts.map(({ node }, i) => {
                     return (
                         // let's wrap each post in an anchor tag
                         // and construct the url for the post using
@@ -47,6 +43,7 @@ export default function InstagramFeed({ instagramPosts }) {
                     )
                 })}
             </ul>
+            {}
         </>
     )
 }

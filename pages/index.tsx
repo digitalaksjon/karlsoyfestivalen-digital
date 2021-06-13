@@ -75,6 +75,7 @@ export async function getStaticProps() {
       //  update the posts to be equal
       // to the edges that were returned from the instagram API response
       posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+      console.log(posts)
     }
   } catch (err) {
     console.log(
