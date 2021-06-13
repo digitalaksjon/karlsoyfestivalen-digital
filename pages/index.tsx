@@ -19,12 +19,12 @@ import { SkipNavContent } from '@reach/skip-nav';
 
 import Page from '@components/page';
 import ConfContent from '@components/index';
-import { META_DESCRIPTION } from '@lib/constants';
+import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
 import Instagram from "instagram-web-api"
 import InstagramFeed from '../components/instagramfeed';
 
 
-export default function Conf({ instagramPosts }) {
+export default function Conf(instagramPosts: object[]) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
@@ -47,7 +47,10 @@ export default function Conf({ instagramPosts }) {
       />
       <InstagramFeed instagramPosts={instagramPosts} />
 
-    </Page>
+
+
+
+    </Page >
   );
 }
 
@@ -56,8 +59,8 @@ export default function Conf({ instagramPosts }) {
 export async function getStaticProps() {
 
   const client = new Instagram({
-    username: process.env.IG_USERNAME,
-    password: process.env.IG_PASSWORD,
+    username: IG_USERNAME,
+    password: IG_PASSWORD,
   })
 
 
@@ -67,7 +70,7 @@ export async function getStaticProps() {
     await client.login()
     // request photos for a specific instagram user
     const instagram = await client.getPhotosByUsername({
-      username: process.env.IG_USERNAME,
+      username: IG_USERNAME,
     })
 
     if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {

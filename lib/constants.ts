@@ -14,6 +14,11 @@ export const FULL_DATE = 'Aug 3rd 12am CET (GMT+1)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 
+
+export const IG_USERNAME = "karlsoyfestivalen"
+export const IG_PASSWORD = "R3cl41m"
+
+
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
 export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;

@@ -155,6 +155,7 @@ export default function Form({ sharePage }: Props) {
           {formState === 'loading' ? <LoadingDots size={4} /> : <>Meld deg på</>}
         </button>
       </div>
+
     </form>
   );
 }
