@@ -23,6 +23,8 @@ import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
 //const Instagram = require('instagram-web-api')
 import image1 from '../public/bakgrunn5.jpg';
 
+import { urlFor } from '@lib/cms-api';
+
 // import InstagramFeed from '../components/instagramfeed';
 
 export interface ConfProps {
@@ -34,7 +36,7 @@ export default function Conf({ instagramPosts}: ConfProps) {
   const meta = {
     title: 'Karlsøyfestivalen Digital',
     description: META_DESCRIPTION,
-    image: image1
+    image: "https://karlsoyfestivalen-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fy36fur6j%2Fproduction%2Ff24bbebf1b08d8d5435712c6e11b98043f0a19bc-1280x850.jpg%3Frect%3D0%2C69%2C1280%2C711%26w%3D900%26h%3D500&w=1920&q=75"
   };
   const ticketNumber = query.ticketNumber?.toString();
   const defaultUserData = {

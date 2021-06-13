@@ -65,7 +65,7 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
         {image && (
           <meta
             property="og:image"
-            content={image.startsWith('https://') ? image : `${SITE_URL}${image}`}
+            content={image}
           />
         )}
       </Head>
