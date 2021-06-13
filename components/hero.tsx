@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-import cn from 'classnames';
-import styleUtils from './utils.module.css';
-import styles from './hero.module.css';
 import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
+import cn from 'classnames';
+import styles from './hero.module.css';
+import styleUtils from './utils.module.css';
 
 export default function Hero() {
   return (
@@ -49,7 +49,7 @@ export default function Hero() {
         {SITE_DESCRIPTION}
       </h2>
       <div className={cn(styleUtils.appear, styleUtils['appear-forth'], styles.metawrapper)}>
-        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://vimeo.com/showcase/8565618/embed" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://vimeo.com/showcase/8565618/embed?autoplay=1&muted=!" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
         <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.manifest)}>
           <div className={cn(styles.inner_manifest)}>
             <h2>KARLSØYFESTIVALENS MANIFEST</h2>

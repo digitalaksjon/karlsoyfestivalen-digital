@@ -64,11 +64,12 @@ export async function getStaticProps() {
     password: IG_PASSWORD,
   })
 
-
+  console.log(client)
 
   let posts = []
   try {
     await client.login()
+
     // request photos for a specific instagram user
     const instagram = await client.getPhotosByUsername({
       username: IG_USERNAME,
