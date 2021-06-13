@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 
-export default function InstagramFeed(instagramPosts: object[]) {
+export default function InstagramFeed({ instagramPosts }) {
 
     return (
         <>

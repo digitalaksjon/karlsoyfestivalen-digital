@@ -24,7 +24,7 @@ import Instagram from "instagram-web-api"
 import InstagramFeed from '../components/instagramfeed';
 
 
-export default function Conf(instagramPosts: object[]) {
+export default function Conf({ instagramPosts }) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
