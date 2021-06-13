@@ -22,20 +22,21 @@ import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
 export default function Hero() {
   return (
     <div className={styles.wrapper}>
-      <h2
-        className={cn(
-          styleUtils.appear,
-          styleUtils['appear-third'],
-          styleUtils['show-on-mobile'],
-          styles.description
-        )}
-      >
-        {SITE_DESCRIPTION}
-      </h2>
-      <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
+      <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.brand)}>
+        Velkommen til <br />
         {BRAND_NAME}
-        <br className={styleUtils['show-on-desktop']} /> <span>Mari Boine / Isák / Polardegos</span>
-        <div>Ohnesorg / Karlsøy Prestegaard / Roastfish & Cornbread Sound System / One Family / Kunstkollektivet Støy / Barnemakt / Slampoesi / Galleri Carlsö / Jemterud + Brungot Trio / Bens Bluesband / Barnas Gourmetkjøkken / Filmverksted / Plantesafari / Marinert villsau / Folkekjøkken / OLi OOO Village CarlsØ </div>
+      </h1>
+      <div className={cn(styleUtils.appear, styleUtils['appear-first'], styles.info)}>
+        <p>{DATE}</p>
+        <div className={styles['description-separator']} />
+        <p>
+          <strong>PÅ INTERNETT</strong>
+        </p>
+      </div>
+      <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
+
+        <span>Mari Boine / Isák / Polardegos / Ohnesorg / Karlsøy Prestegaard</span>
+        <div>Roastfish & Cornbread Sound System / One Family / Kunstkollektivet Støy / Barnemakt / Slampoesi / Galleri Carlsö / Jemterud + Brungot Trio / Bens Bluesband / Barnas Gourmetkjøkken / Filmverksted / Plantesafari / Marinert villsau / Folkekjøkken / OLi OOO Village CarlsØ </div>
       </h1>
       <h2
         className={cn(
@@ -47,13 +48,27 @@ export default function Hero() {
       >
         {SITE_DESCRIPTION}
       </h2>
-      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
-        <p>{DATE}</p>
-        <div className={styles['description-separator']} />
-        <p>
-          <strong>PÅ INTERNETT</strong>
-        </p>
+      <div className={cn(styleUtils.appear, styleUtils['appear-forth'], styles.metawrapper)}>
+        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://player.vimeo.com/video/562211185?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.manifest)}>
+          <div className={cn(styles.inner_manifest)}>
+            <h2>KARLSØYFESTIVALENS MANIFEST</h2>
+
+            <div>
+              Karlsøyfestivalen er ei markering av motstand mot et samfunn der de viktigste verdiene er lønnsomhet, konkurranse og grådighet. Den er en protest mot raseringen av distriktene, miljøødeleggelsene, rasisme og diskriminering. Den protesterer mot kolonialismen, utbyttinga og den brutale undertrykkinga av verdens folk.
+            </div>
+
+            <div>
+              Karlsøyfestivalen er en fest for og ei feiring av alle positive motkrefter! Den skal gjenspeile, gjenskape og fremme alle de alternative kreftene som kjemper for en annen og bedre verden preget av solidaritet, medfølelse og kjærlighet!
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
+
     </div>
+
   );
 }

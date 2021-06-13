@@ -31,4 +31,5 @@ module.exports = withImages({
     imageSizes: [24, 64, 300]
   },
   rewrites: () => [STUDIO_REWRITE],
+  
 })

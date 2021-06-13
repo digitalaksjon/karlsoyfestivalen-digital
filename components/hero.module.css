@@ -17,8 +17,27 @@
 .wrapper {
   margin-top: var(--space-12x);
   width: 100%;
-  margin: 0 auto;
+  margin: 30vh auto;
 }
+
+
+.brand {
+  font-size: 35px;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 25px;    
+  text-shadow: 2px 2px #F0604C;
+  color: #FDFBF9;
+  
+  padding: 30px 0;
+  
+  
+  
+  
+}
+
 
 .hero {
   font-size: 40px;
@@ -31,18 +50,18 @@
   color: #F0604C;
   background-color: rgba(67, 59, 53,0.4);
   backdrop-filter: blur(5px);
-  padding: 30px 0;
-  border:2px solid #FDFBF9;
-  border-radius:10px;
-  
-  
+
+  border:2px dashed #FDFBF9;
+   
 }
+
 
 .hero span {
     font-size: 0.8em;
-    text-shadow: 3px 3px #433B35;
+    text-shadow: 2px 2px #433B35;
     color: #FDFBF9;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
+    line-height: 1em;
     width: 100%;
     display: block;
     margin: 40px auto;
@@ -50,7 +69,7 @@
 
   .hero div {
     font-size: 0.5em;
-    text-shadow: 2px 2px #F0604C;
+    text-shadow: 1px 1px #433B35;
     color: #FDFBF9;
     letter-spacing: 0.4px;
     width: 80%;
@@ -87,6 +106,52 @@
   
 }
 
+.manifest {
+  width: 100%;
+  margin-top: 35px;
+  height: 60%;
+  text-align: center;
+  font-size: 0.9em;
+  color: #433B35;
+  padding: 10px;
+  border:2px dashed #FDFBF9;
+}
+
+
+.inner_manifest {
+  background-color: rgba(253, 251, 249,0.9);
+  padding:25px;
+
+}
+
+
+.manifest h2 {
+  font-size: 1.3em;
+  color: #F0604C;
+  margin-bottom: 20px;
+  
+}
+
+.inner_manifest div {
+  margin: 30px 0;
+}
+
+.metawrapper {
+  
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.iframes {
+  width: 100%;
+}
+
+.iframes iframe {
+  width: 100%;
+  height: 100% !important;
+}
+
 .description-separator {
   height: 24px;
   width: 1px;
@@ -105,18 +170,26 @@
     width: 80%;
     margin: 0 auto;
   }
-  .hero {
-    font-size: 120px;
-    line-height: 1;
-    font-weight: 800;
-    margin: 0 0px 40px;
-    text-shadow: 6px 6px #FDFBF9;
+  .brand {
+    font-size: 100px;
+
+    text-shadow: 6px 6px #F0604C;
   }
 
+  .hero {
+    font-size: 100px;
+    line-height: 1;
+    font-weight: 800;
+    margin: 40px 40px;
+    text-shadow: 4px 4px #FDFBF9;
+  }
+  .metawrapper {
+    flex-direction: row;
+  }
 
   .hero span {
-    font-size: 0.5em;
-    text-shadow: 3px 3px #F0604C;
+    font-size: 0.6em;
+    text-shadow: 2px 2px #433B35;
 
   }
 
@@ -131,6 +204,16 @@
     display: block;
     margin: 40px auto;
   }
+  
+  .iframes {
+    width: 70%;
+  }
+
+  .iframes iframe {
+    width: 100%;
+    height: 70% !important;
+  }
+  
 
   .info {
     font-size: 24px;
@@ -138,6 +221,14 @@
     width: 40%;
     
   }
+
+  
+  .manifest {
+    width: 30%;
+    margin-top: 0px;
+  }
+
+
 
   .description {
     font-size: var(--space-8x);

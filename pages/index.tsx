@@ -20,8 +20,11 @@ import { SkipNavContent } from '@reach/skip-nav';
 import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_DESCRIPTION } from '@lib/constants';
+import Instagram from "instagram-web-api"
+import InstagramFeed from '../components/instagramfeed';
 
-export default function Conf() {
+
+export default function Conf({ instagramPosts }) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
@@ -42,6 +45,47 @@ export default function Conf() {
         defaultUserData={defaultUserData}
         defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
       />
+      <InstagramFeed instagramPosts={instagramPosts} />
+
     </Page>
   );
+}
+
+
+
+export async function getStaticProps() {
+
+  const client = new Instagram({
+    username: process.env.IG_USERNAME,
+    password: process.env.IG_PASSWORD,
+  })
+
+
+
+  let posts = []
+  try {
+    await client.login()
+    // request photos for a specific instagram user
+    const instagram = await client.getPhotosByUsername({
+      username: process.env.IG_USERNAME,
+    })
+
+    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+      // if we receive timeline data back
+      //  update the posts to be equal
+      // to the edges that were returned from the instagram API response
+      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+    }
+  } catch (err) {
+    console.log(
+      "Something went wrong while fetching content from Instagram",
+      err
+    )
+  }
+
+  return {
+    props: {
+      instagramPosts: posts, // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
+    },
+  }
 }

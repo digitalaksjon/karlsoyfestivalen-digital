@@ -38,6 +38,7 @@
   font-size: var(--text-md);
   color: #fff;
   font-family: inherit;
+  
 }
 
 @media (min-width: 768px) {
@@ -52,7 +53,7 @@
 }
 
 .input-label {
-  background-color: var(--sidebar);
+  background-color: #33373c;
   border-radius: var(--space-2x);
   border: 1px solid transparent;
   transition: border-color 0.2s ease, background-color 0.2s ease;
@@ -60,7 +61,7 @@
 }
 
 .input-label.focused {
-  background-color: #33373c;
+  background-color: #6D645C;
 }
 
 .input-label.error {

@@ -48,7 +48,7 @@ type Props = {
   layoutStyles?: any;
 };
 
-export default function Layout({ children, className, hideNav, layoutStyles }: Props) {
+export default function Layout({ children, className, hideNav, layoutStyles, instagramPosts, props }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
 
@@ -104,6 +104,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
                 ''
               }
               {children}
+
             </div>
           </main>
           {!activeRoute.startsWith('/stage') && <Footer />}
@@ -115,6 +116,8 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
 
 function shuffle(array: string[]) {
   var currentIndex = array.length, randomIndex;
+
+
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
