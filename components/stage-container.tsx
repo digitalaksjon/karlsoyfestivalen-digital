@@ -41,14 +41,15 @@ export default function StageContainer({ stage, allStages }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.streamContainer}>
-        <iframe src="https://vimeo.com/event/1068769/embed" width="100%" height="600" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+        <iframe src="https://vimeo.com/event/1068769/embed" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
         <iframe src="https://vimeo.com/event/1068769/chat/" width="100%" height="100%" frameBorder="0"></iframe>
         {loginStatus === 'loggedIn' ? (
           <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>
 
           </div>
         ) : loginStatus === 'loading' ? null : (
-          <ConfEntry onRegister={() => mutate()} />
+          <div></div>
+        /* <ConfEntry onRegister={() => mutate()} /> */
         )}
       </div>
       <ScheduleSidebar allStages={updatedStages} />
