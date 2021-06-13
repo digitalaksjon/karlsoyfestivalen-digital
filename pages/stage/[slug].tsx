@@ -23,6 +23,7 @@ import Layout from '@components/layout';
 import { getAllStages } from '@lib/cms-api';
 import { Stage } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
+import Header from '@components/header';
 
 type Props = {
   stage: Stage;
@@ -31,13 +32,14 @@ type Props = {
 
 export default function StagePage({ stage, allStages }: Props) {
   const meta = {
-    title: 'Karlsøyfestivalen Digital',
+    title: stage.name+' - Karlsøyfestivalen Digital',
     description: META_DESCRIPTION
   };
 
   return (
     <Page meta={meta} fullViewport>
       <Layout>
+      <Header hero={stage.name} description={META_DESCRIPTION} />
         <StageContainer stage={stage} allStages={allStages} />
       </Layout>
     </Page>

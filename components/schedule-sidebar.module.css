@@ -22,8 +22,8 @@
   font-size: 14px;
   min-height: 1px;
   height: 100%;
-  max-height: calc(var(--100vh) - var(--header-height) - 400px);
   overflow-y: auto;
+  max-height:  50vh;
   -webkit-overflow-scrolling: touch;
   --talk-card-width: 100%;
 }
@@ -59,7 +59,7 @@
     height: 100%;
     min-height: 340px;
     max-width: 315px;
-    max-height: calc(var(--100vh) - var(--header-height));
+    max-height:  70vh;
     --talk-card-width: unset;
   }
 }

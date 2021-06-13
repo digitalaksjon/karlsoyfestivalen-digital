@@ -48,30 +48,19 @@
   margin: 0 0 25px;    
   text-shadow: 2px 2px #FDFBF9;
   color: #F0604C;
-  background-color: rgba(67, 59, 53,0.4);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 
   border:2px dashed #FDFBF9;
    
 }
 
 
-.hero span {
-    font-size: 0.8em;
-    text-shadow: 2px 2px #433B35;
-    color: #FDFBF9;
-    letter-spacing: 0.5px;
-    line-height: 1em;
-    width: 100%;
-    display: block;
-    margin: 40px auto;
-  }
 
   .hero div {
-    font-size: 0.5em;
+    font-size: 0.6em;
     text-shadow: 1px 1px #433B35;
     color: #FDFBF9;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
     width: 80%;
     display: block;
     margin: 40px auto;
@@ -111,7 +100,7 @@
   margin-top: 35px;
   height: 60%;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.9em;
   color: #433B35;
   padding: 10px;
   border:2px dashed #FDFBF9;
@@ -126,7 +115,7 @@
 
 
 .manifest h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #F0604C;
   margin-bottom: 20px;
   
@@ -200,7 +189,7 @@
     letter-spacing: 0.6px;
     line-height: 1.2em;
     width: 80%;
-    font-weight: 500;
+    font-weight: 700;
     display: block;
     margin: 40px auto;
   }

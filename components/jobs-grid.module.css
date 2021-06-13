@@ -30,6 +30,8 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-color: #FDFBF9;
+  padding: 24px;
 }
 
 .companyName {
@@ -42,6 +44,7 @@
   margin: var(--space-4x) 0 var(--space);
   padding-bottom: var(--space);
   display: inline-flex;
+
 }
 
 @media (min-width: 500px) {

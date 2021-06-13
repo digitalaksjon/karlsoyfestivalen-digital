@@ -16,10 +16,11 @@
 
 .grid {
   margin: 50px auto;
-  padding: 0 24px;
+  padding: 24px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 24px;
@@ -27,11 +28,13 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-color: #FDFBF9;
+
 }
 
 @media (min-width: 768px) {
   .grid {
-    padding: 0 var(--space-8x);
+    padding: 24px;
   }
 }
 

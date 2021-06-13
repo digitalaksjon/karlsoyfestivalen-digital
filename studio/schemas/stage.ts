@@ -26,7 +26,7 @@ export default {
     {
       name: 'discord',
       type: 'string',
-      title: 'Discord'
+      title: 'Vimeo Live Event ID'
     },
     {
       name: 'schedule',

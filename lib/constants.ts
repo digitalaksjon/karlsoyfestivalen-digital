@@ -5,7 +5,7 @@ export const BRAND_NAME = 'Karlsøyfestivalen 2021';
 export const SITE_NAME_MULTILINE = ['Karlsøyfestivalen', 'Conf'];
 export const SITE_NAME = 'Karlsøyfestivalen Digital';
 export const META_DESCRIPTION =
-  'Karlsøyfestivalne er en global digital festival med mening!';
+  'Karlsøyfestivalen er en global digital festival med mening!';
 export const SITE_DESCRIPTION =
   'Velkommen tilbake til Karlsøya!';
 export const DATE = '5. - 8. august 2021';
@@ -30,36 +30,32 @@ export const REPO = 'https://github.com/digitalaksjon/karlsoyfestivalen-digital'
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
   {
-    name: 'Festivalplassen',
-    route: '/stage/festivalplassen'
-  },
-  {
     name: 'Storscena',
     route: '/stage/storscena'
   },
   {
-    name: 'Lillescena',
-    route: '/stage/lillescena'
+    name: 'Galleriet',
+    route: '/stage/galleriet'
   },
   {
     name: 'Barnelavvoen',
     route: '/stage/barnelavvoen'
   },
   {
-    name: 'Sendeplan',
-    route: '/schedule'
+    name: 'Program',
+    route: '/program'
   },
   {
-    name: 'Speakers',
-    route: '/speakers'
+    name: 'Artister',
+    route: '/artist'
   },
   {
-    name: 'Expo',
-    route: '/expo'
+    name: 'Frivillig',
+    route: '/frivillig'
   },
   {
-    name: 'Jobs',
-    route: '/jobs'
+    name: 'Om oss',
+    route: '/samarbeid'
   }
 ];
 

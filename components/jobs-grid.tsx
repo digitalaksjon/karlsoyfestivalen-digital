@@ -39,7 +39,7 @@ function CompanyJobs({ jobs }: Props) {
               <p className={styles.description}>{job.description}</p>
             </div>
             <p className={styles.link}>
-              Learn More
+              Les mer
               <svg
                 className={styles.icon}
                 viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ export default function JobsGrid({ jobs }: Props) {
               rel="noopener noreferrer"
               className={styles.button}
             >
-              <span>Join the recruiters live on</span>
+              <span>Meld deg som frivillig nå</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"

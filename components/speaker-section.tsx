@@ -38,7 +38,7 @@ type Props = {
 export default function SpeakerSection({ speaker }: Props) {
   return (
     <>
-      <Link href="/speakers">
+      <Link href="/artist">
         <a className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
@@ -53,19 +53,21 @@ export default function SpeakerSection({ speaker }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Back to speakers
+          Tilbake til artister
         </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
-        <Image
-          alt={speaker.name}
-          title={speaker.name}
-          src={urlFor(speaker.image).width(300).height(400).url() || ''}
-          className={styles.image}
-          loading="lazy"
-          height={400}
-          width={300}
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            alt={speaker.name}
+            title={speaker.name}
+            src={urlFor(speaker.image).width(600).url() || ''}
+            className={styles.image}
+            layout="fill"
+        
+          />
+        </div>
+
         <div className={styles['speaker-details']}>
           <div>
             <h1 className={styles.name}>{speaker.name}</h1>
@@ -75,7 +77,7 @@ export default function SpeakerSection({ speaker }: Props) {
             </p>
             <h2 className={styles['bio-header']}>Bio</h2>
             <p className={styles.bio}>{speaker.bio}</p>
-            <h3 className={styles['socials-header']}>Social Media</h3>
+            <h3 className={styles['socials-header']}>{speaker.name} i sosiale medier</h3>
             {speaker.twitter ? (
               <a
                 aria-label="Twitter"
@@ -108,12 +110,7 @@ export default function SpeakerSection({ speaker }: Props) {
           </div>
         </div>
       </div>
-      {speaker.talk && (
-        <div className={styles['talk-details']}>
-          <h3 className={styles['socials-header']}>{speaker.talk.title}</h3>
-          <p>{speaker.talk.description}</p>
-        </div>
-      )}
+      
     </>
   );
 }

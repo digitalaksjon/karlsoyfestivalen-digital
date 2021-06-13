@@ -64,6 +64,16 @@
   .container {
     flex-direction: row;
     padding: var(--space-8x);
+
+    
+  }
+
+  .imageContainer {
+    position: relative;
+    max-height: 500px;
+    max-width: 600px;
+    height: 500px;
+    width: 600px;
   }
 
   .backlink {
@@ -82,7 +92,7 @@
   }
 
   .image {
-    max-width: 300px;
+    max-width: 00px;
     max-height: 400px;
   }
 }

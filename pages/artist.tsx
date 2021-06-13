@@ -17,40 +17,39 @@
 import { GetStaticProps } from 'next';
 
 import Page from '@components/page';
-import JobsGrid from '@components/jobs-grid';
+import SpeakersGrid from '@components/speakers-grid';
 import Layout from '@components/layout';
 import Header from '@components/header';
 
-import { getAllJobs } from '@lib/cms-api';
-import { Job } from '@lib/types';
+import { getAllSpeakers } from '@lib/cms-api';
+import { Speaker } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
-  jobs: Job[];
+  speakers: Speaker[];
 };
 
-export default function Jobs({ jobs }: Props) {
+export default function Speakers({ speakers }: Props) {
   const meta = {
-    title: 'Career Fair - Virtual Event Starter Kit',
+    title: 'Artister, kunstnere og andre bidragsytere',
     description: META_DESCRIPTION
   };
-
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Career Fair" description={meta.description} />
-        <JobsGrid jobs={jobs} />
+        <Header hero="Artister" description={meta.description} />
+        <SpeakersGrid speakers={speakers} />
       </Layout>
     </Page>
   );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const jobs = await getAllJobs();
+  const speakers = await getAllSpeakers();
 
   return {
     props: {
-      jobs
+      speakers
     },
     revalidate: 60
   };

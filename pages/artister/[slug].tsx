@@ -14,44 +14,54 @@
  * limitations under the License.
  */
 
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
 import Page from '@components/page';
-import SponsorsGrid from '@components/sponsors-grid';
-import Header from '@components/header';
+import SpeakerSection from '@components/speaker-section';
 import Layout from '@components/layout';
 
-import { getAllSponsors } from '@lib/cms-api';
-import { Sponsor } from '@lib/types';
+import { getAllSpeakers } from '@lib/cms-api';
+import { Speaker } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
-  sponsors: Sponsor[];
+  speaker: Speaker;
 };
 
-export default function ExpoPage({ sponsors }: Props) {
+export default function SpeakerPage({ speaker }: Props) {
   const meta = {
-    title: 'Expo - Virtual Event Starter Kit',
+    title: speaker.name,
     description: META_DESCRIPTION
   };
 
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Expo" description={meta.description} />
-        <SponsorsGrid sponsors={sponsors} />
+        <SpeakerSection speaker={speaker} />
       </Layout>
     </Page>
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const sponsors = await getAllSponsors();
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const slug = params?.slug;
+  const speakers = await getAllSpeakers();
+  const currentSpeaker = speakers.find((s: Speaker) => s.slug === slug) || null;
 
   return {
     props: {
-      sponsors
+      speaker: currentSpeaker
     },
     revalidate: 60
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const speakers = await getAllSpeakers();
+  const slugs = speakers.map((s: Speaker) => ({ params: { slug: s.slug } }));
+
+  return {
+    paths: slugs,
+    fallback: false
   };
 };

@@ -23,6 +23,7 @@ import styleUtils from './utils.module.css';
 import ScheduleSidebar from './schedule-sidebar';
 import ConfEntry from './conf-entry';
 
+
 type Props = {
   stage: Stage;
   allStages: Stage[];
@@ -37,11 +38,12 @@ export default function StageContainer({ stage, allStages }: Props) {
   const updatedStages = response.data || [];
   const updatedStage = updatedStages.find((s: Stage) => s.slug === stage.slug) || stage;
   const { loginStatus, mutate } = useLoginStatus();
-
+  const vimeoURL = "https://vimeo.com/event/"+stage.discord+"/embed"
   return (
     <div className={styles.container}>
+
       <div className={styles.streamContainer}>
-        <iframe src="https://vimeo.com/event/1068769/embed" width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+        <iframe src={vimeoURL} width="100%" height="100%" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
         <iframe src="https://vimeo.com/event/1068769/chat/" width="100%" height="100%" frameBorder="0"></iframe>
         {loginStatus === 'loggedIn' ? (
           <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>

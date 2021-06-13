@@ -1,10 +1,10 @@
 {
-  "name": "virtual-event-starter-kit",
-  "description": "Starter kit for your virtual event.",
+  "name": "karlsoyfestivalen-digital",
+  "description": "En global digital festival med mening",
   "private": true,
-  "repository": "vercel/virtual-event-starter-kit",
-  "author": "Vercel Inc.",
-  "homepage": "https://demo.vercel.events",
+  "repository": "digitalaksjon/karlsoyfestivalen-digital",
+  "author": "Digital Aksjon",
+  "homepage": "https://karlsoyfestivalen.no",
   "license": "Apache-2.0",
   "engines": {
     "node": "^14.0.0",

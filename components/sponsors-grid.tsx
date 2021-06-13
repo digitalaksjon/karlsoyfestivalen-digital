@@ -23,7 +23,7 @@ import { urlFor } from '@lib/cms-api';
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
-    <Link key={sponsor.name} href={`/expo/${sponsor.slug}`}>
+    <Link key={sponsor.name} href={`/partner/${sponsor.slug}`}>
       <a
         role="button"
         tabIndex={0}

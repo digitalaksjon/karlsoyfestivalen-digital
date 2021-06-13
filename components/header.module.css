@@ -28,6 +28,7 @@
   color: var(--secondary-color);
   margin-top: 0;
   margin-left: 24px;
+  
 }
 
 @media (min-width: 768px) {
