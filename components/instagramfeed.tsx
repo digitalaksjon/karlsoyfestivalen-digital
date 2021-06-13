@@ -9,9 +9,6 @@ export default function InstagramFeed({ instagramPosts }:InstagramFeedProps) {
 
     return (
         <>
-
-
-
             <ul>
                 {/* let's iterate through each of the
          instagram posts that were returned
@@ -19,9 +16,8 @@ export default function InstagramFeed({ instagramPosts }:InstagramFeedProps) {
 
                 }
 
-
-                {instagramPosts.map(({ node }, i) => {
-                    console.log(instagramPosts)
+                {instagramPosts.map((node, i) => {
+          
                     return (
                         // let's wrap each post in an anchor tag
                         // and construct the url for the post using
