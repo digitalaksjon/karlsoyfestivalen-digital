@@ -183,7 +183,7 @@
   }
 
   .hero div {
-    font-size: 0.3em;
+    font-size: 0.34em;
     text-shadow: 2px 2px #433B35;
     color: #FDFBF9;
     letter-spacing: 0.6px;
@@ -215,6 +215,7 @@
   .manifest {
     width: 30%;
     margin-top: 0px;
+    font-size: 18px;
   }
 
 
