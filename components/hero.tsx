@@ -34,7 +34,7 @@ export default function Hero() {
         </p>
       </div>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
-        <div>Mari Boine / ISÁK / Polardegos / Ohnesorg / Karlsøy Prestegaard / Roastfish & Cornbread Sound System / One Family / Kunstkollektivet Støy / Barnemakt / Slampoesi / Galleri Carlsö / Jemterud + Brungot Trio / Bens Bluesband / Barnas Gourmetkjøkken / Filmverksted / Plantesafari / Marinert villsau / Folkekjøkken / OLi OOO Village CarlsØ </div>
+        <div>Mari Boine / Polardegos / Ohnesorg / Karlsøy Prestegaard / Roastfish & Cornbread Sound System / MoE / Hotbox / One Family / Kunstkollektivet Støy / Barnemakt / Slampoesi / Galleri Carlsö / Jemterud + Brungot Trio / Bens Bluesband / Barnas Gourmetkjøkken / Filmverksted / Plantesafari / Marinert villsau / Folkekjøkken / OLi OOO Village CarlsØ </div>
       </h1>
       <h2
         className={cn(
