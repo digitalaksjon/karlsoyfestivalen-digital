@@ -32,7 +32,7 @@ export default function PostPage({ post }: Props) {
   const meta = {
     title: post.title,
     description: META_DESCRIPTION,
-    image: post.featuredImage
+    image: post.featuredImage.asset._ref
   };
 
   return (
