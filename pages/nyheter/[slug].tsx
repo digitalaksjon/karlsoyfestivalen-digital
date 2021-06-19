@@ -31,10 +31,12 @@ type Props = {
 };
 
 export default function PostPage({ post }: Props) {
+
+  const image = urlFor(post.featuredImage);
   const meta = {
     title: post.title,
     description: META_DESCRIPTION,
-    image: urlFor(post.featuredImage)
+    image: image.toString()
   };
 
   return (
