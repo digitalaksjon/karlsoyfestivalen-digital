@@ -29,15 +29,8 @@ type Props = {
 };
 
 
-const serializers = {
-  types: {
-    code: props => (
-      <pre data-language={props.node.language}>
-        <code>{props.node.code}</code>
-      </pre>
-    )
-  }
-}
+
+
 
 Date.prototype.getMonthName = function () {
   var monthNames = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
@@ -48,6 +41,16 @@ Date.prototype.getMonthName = function () {
 
 
 export default function PostSection({ post }: Props) {
+  const serializers = {
+    types: {
+      code: props => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      )
+    }
+  }
+
   const dateObject = new Date(post.publishedAt);
   return (
     <>
