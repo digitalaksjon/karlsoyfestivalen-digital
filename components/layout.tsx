@@ -27,6 +27,15 @@ import Footer, { HostedByVercel } from './footer';
 import ViewSource from '@components/view-source';
 
 
+
+
+type Props = {
+  children: React.ReactNode;
+  className?: string;
+  hideNav?: boolean;
+  layoutStyles?: any;
+};
+
 export default function Layout({ children, className, hideNav, layoutStyles }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
