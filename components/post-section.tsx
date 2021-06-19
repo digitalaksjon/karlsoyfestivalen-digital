@@ -30,8 +30,6 @@ type Props = {
 
 
 
-
-
 Date.prototype.getMonthName = function () {
   var monthNames = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
     "Juli", "August", "September", "Oktober", "November", "Desember"
