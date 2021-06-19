@@ -28,10 +28,11 @@ type Props = {
   post: Post;
 };
 
-export default function SpeakerPage({ post }: Props) {
+export default function PostPage({ post }: Props) {
   const meta = {
     title: post.title,
-    description: META_DESCRIPTION
+    description: META_DESCRIPTION,
+    image: post.featuredImage
   };
 
   return (
