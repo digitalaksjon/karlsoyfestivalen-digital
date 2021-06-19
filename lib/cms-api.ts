@@ -25,6 +25,7 @@ import {
   getAllJobsQuery,
   getAllSponsorsQuery,
   getAllStagesQuery,
+  getAllPostsQuery,
   getAllSpeakersQuery
 } from './queries'
 
@@ -63,6 +64,11 @@ export const usePreviewSubscription = createPreviewSubscriptionHook(config)
 
 export async function getAllSpeakers(preview?: Boolean) {
   const data = await getClient(preview).fetch(getAllSpeakersQuery)
+  return data
+}
+
+export async function getAllPosts(preview?: Boolean) {
+  const data = await getClient(preview).fetch(getAllPostsQuery)
   return data
 }
 

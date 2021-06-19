@@ -15,6 +15,15 @@ export const getAllSpeakersQuery = groq`*[_type == "speaker"]{
         image
       }`
 
+export const getAllPostsQuery = groq`*[_type == "post"]{
+        title,
+        "slug": slug.current,
+        excerpt,
+        publishedAt,
+        body,
+        featuredImage
+      }`
+
 export const getAllStagesQuery = groq`*[_type == "stage"]{
         name,
         "slug": slug.current,

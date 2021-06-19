@@ -29,22 +29,15 @@ export const CODE_OF_CONDUCT =
 export const REPO = 'https://github.com/digitalaksjon/karlsoyfestivalen-digital';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
+
   {
-    name: 'Storscena',
-    route: '/stage/storscena'
+    name: 'Nyheter',
+    route: '/nyheter'
   },
-  {
-    name: 'Galleriet',
-    route: '/stage/galleriet'
-  },
-  {
-    name: 'Barnelavvoen',
-    route: '/stage/barnelavvoen'
-  },
-  {
-    name: 'Program',
-    route: '/program'
-  },
+  /*  {
+      name: 'Program',
+      route: '/program'
+    },*/
   {
     name: 'Artister',
     route: '/artist'

@@ -31,6 +31,17 @@ export type Speaker = {
   imageSquare: Image;
 };
 
+
+export type Post = {
+  title: string;
+  slug: string;
+  publishedAt: Date;
+  exceprt: Text;
+  body: Text;
+  featuredImage: Image;
+};
+
+
 export type Stage = {
   name: string;
   slug: string;
@@ -92,11 +103,11 @@ export type ConfUser = {
 
 export type GitHubOAuthData =
   | {
-      type: 'token';
-      token: string;
-    }
+    type: 'token';
+    token: string;
+  }
   | {
-      type: 'user';
-      name: string;
-      login: string;
-    };
+    type: 'user';
+    name: string;
+    login: string;
+  };
