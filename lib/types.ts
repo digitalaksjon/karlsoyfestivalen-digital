@@ -36,7 +36,7 @@ export type Post = {
   title: string;
   slug: string;
   publishedAt: Date;
-  exceprt: Text;
+  excerpt: Text;
   body: Text;
   featuredImage: Image;
 };

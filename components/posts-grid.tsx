@@ -45,8 +45,8 @@ export default function PostsGrid({ posts }: Props) {
             <div className={styles.imageWrapper}>
               <Image
                 alt={post.title}
-                src={urlFor(post.featuredImage).width(400).height(400).url() || ''}
                 className={styles.image}
+                src={urlFor(post.featuredImage).width(400).height(400).url() || ''}
                 loading="lazy"
                 quality="50"
                 title={post.title}
@@ -60,7 +60,7 @@ export default function PostsGrid({ posts }: Props) {
                 <h2 className={styles.name}>{post.title}</h2>
                 <p className={styles.title}>
 
-                  <span className={styles.company}>{post.exceprt && <BlockContent blocks={post.exceprt} serializers={serializers} />}</span>
+                  <span className={styles.company}>{post.excerpt && <BlockContent blocks={post.excerpt} serializers={serializers} />}</span>
                 </p>
               </div>
             </div>
