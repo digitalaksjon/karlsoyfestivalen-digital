@@ -23,6 +23,8 @@ import Layout from '@components/layout';
 import { getAllPosts } from '@lib/cms-api';
 import { Post } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
+import { urlFor } from '@lib/cms-api';
+
 
 type Props = {
   post: Post;
@@ -32,7 +34,7 @@ export default function PostPage({ post }: Props) {
   const meta = {
     title: post.title,
     description: META_DESCRIPTION,
-    image: post.featuredImage.asset._ref
+    image: urlFor(post.featuredImage)
   };
 
   return (
