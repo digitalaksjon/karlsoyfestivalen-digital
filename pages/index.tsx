@@ -21,17 +21,45 @@ import Page from '@components/page';
 import ConfContent from '@components/index';
 import { META_DESCRIPTION, IG_USERNAME, IG_PASSWORD } from '@lib/constants';
 //const Instagram = require('instagram-web-api')
-import image1 from '../public/bakgrunn5.jpg';
 
 import { urlFor } from '@lib/cms-api';
+import BackgroundSlideshow from 'react-background-slideshow'
 
+
+import PostsGrid from '@components/posts-grid';
+
+import { getAllPosts } from '@lib/cms-api';
+import { Post } from '@lib/types';
+import { GetStaticProps } from "next";
+
+
+import image1 from '../public/bakgrunn1.jpg';
+import image2 from '../public/bakgrunn2.jpg';
+import image3 from '../public/bakgrunn3.jpg';
+import image4 from '../public/bakgrunn4.jpg';
+import image5 from '../public/bakgrunn5.jpg';
+import image6 from '../public/bakgrunn6.jpg';
+import image7 from '../public/bakgrunn7.jpg';
+import image8 from '../public/bakgrunn8.jpg';
+
+const imageArray = [image1, image2, image3, image4, image5, image6, image7, image8];
+
+const randomImageArray = shuffle(imageArray);
+
+type Props = {
+  children: React.ReactNode;
+  className?: string;
+  hideNav?: boolean;
+  layoutStyles?: any;
+  posts: Post[];
+};
 // import InstagramFeed from '../components/instagramfeed';
 
 export interface ConfProps {
   instagramPosts: any[];
 }
 
-export default function Conf({ instagramPosts}: ConfProps) {
+export default function Conf({posts}:Props) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
@@ -45,17 +73,45 @@ export default function Conf({ instagramPosts}: ConfProps) {
     name: query.name?.toString(),
     username: query.username?.toString()
   };
-
+  const loaded = useLoaded();
   return (
     <Page meta={meta} fullViewport>
       <SkipNavContent />
+
+    {loaded &&
+      <BackgroundSlideshow images={randomImageArray} animationDelay={12000} />
+      }
+        
       <ConfContent
         defaultUserData={defaultUserData}
         defaultPageState={query.ticketNumber ? 'ticket' : 'registration'}
+        posts={posts}
       />
+
+      
 
     </Page >
   );
+}
+
+function shuffle(array: string[]) {
+  var currentIndex = array.length, randomIndex;
+
+
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
 }
 
 /*
@@ -98,3 +154,22 @@ export async function getStaticProps() {
     },
   }
 }*/
+
+import {useEffect, useState} from "react";
+
+export const useLoaded = () => {
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => setLoaded(true), []);
+    return loaded;
+};
+
+
+export const getStaticProps: GetStaticProps = async () => { // must be async
+  const posts = await getAllPosts();
+
+  return  {
+    props: {
+      posts: posts
+    }
+  };
+}

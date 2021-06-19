@@ -61,9 +61,11 @@ export default function SpeakerSection({ speaker }: Props) {
           <Image
             alt={speaker.name}
             title={speaker.name}
-            src={urlFor(speaker.image).width(600).url() || ''}
+            src={urlFor(speaker.image).width(600).height(600).url() || ''}
             className={styles.image}
-            layout="fill"
+            layout="intrinsic"
+            width={600}
+            height={600}
         
           />
         </div>
@@ -72,7 +74,7 @@ export default function SpeakerSection({ speaker }: Props) {
           <div>
             <h1 className={styles.name}>{speaker.name}</h1>
             <p className={styles.title}>
-              {`${speaker.title} @ `}
+              {`${speaker.title} `}
               <span className={styles.company}>{speaker.company}</span>
             </p>
             <h2 className={styles['bio-header']}>Bio</h2>
@@ -80,7 +82,7 @@ export default function SpeakerSection({ speaker }: Props) {
             <h3 className={styles['socials-header']}>{speaker.name} i sosiale medier</h3>
             {speaker.twitter ? (
               <a
-                aria-label="Twitter"
+                aria-label="Instagram"
                 href={speaker.twitter}
                 target="_blank"
                 rel="noopener noreferrer"

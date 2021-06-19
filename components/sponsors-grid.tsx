@@ -23,7 +23,7 @@ import { urlFor } from '@lib/cms-api';
 
 function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
   return (
-    <Link key={sponsor.name} href={`/partner/${sponsor.slug}`}>
+    <Link key={sponsor.name} href={`/samarbeidspartner/${sponsor.slug}`}>
       <a
         role="button"
         tabIndex={0}
@@ -35,13 +35,13 @@ function SponsorCard({ sponsor }: { sponsor: Sponsor }) {
         <div className={styles.imageWrapper}>
           <Image
             alt={sponsor.name}
-            src={urlFor(sponsor.cardImage).width(900).height(500).url() || ''}
+            src={urlFor(sponsor.cardImage).width(500).height(500).url() || ''}
             className={cn(styles.image, {
               [styles.silver]: sponsor.tier === 'silver'
             })}
             loading="lazy"
             title={sponsor.name}
-            width={900}
+            width={500}
             height={500}
           />
         </div>

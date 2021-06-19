@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "nextjs-conference",
+    "name": "karlsoyfestivalen-studio",
     "basePath": "/studio"
   },
   "api": {

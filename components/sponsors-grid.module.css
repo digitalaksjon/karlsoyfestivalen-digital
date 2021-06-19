@@ -69,6 +69,7 @@
   height: 100%;
   position: relative;
   display: flex;
+  max-height: 300px;
 }
 
 .image {
