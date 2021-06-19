@@ -30,12 +30,9 @@ type Props = {
 
 
 
-Date.prototype.getMonthName = function () {
-  var monthNames = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
-    "Juli", "August", "September", "Oktober", "November", "Desember"
-  ];
-  return monthNames[this.getMonth()];
-}
+var monthNames = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
+  "Juli", "August", "September", "Oktober", "November", "Desember"
+];
 
 
 export default function PostSection({ post }: Props) {
@@ -87,7 +84,7 @@ export default function PostSection({ post }: Props) {
           <div>
             <h1 className={styles.name}>{post.title}</h1>
             <p className={styles.date} dangerouslySetInnerHTML={{
-              __html: "Publisert: " + dateObject.getDate() + ". <span>" + dateObject.getMonthName() + " " + dateObject.getFullYear() + "</span>",
+              __html: "Publisert: " + dateObject.getDate() + ". <span>" + monthNames[dateObject.getMonth()] + " " + dateObject.getFullYear() + "</span>",
             }}></p>
 
 
