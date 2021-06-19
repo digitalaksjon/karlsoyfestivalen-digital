@@ -30,12 +30,9 @@ type Props = {
 export default function PostsGrid({ posts }: Props) {
   const serializers = {
     types: {
-      code: props => (
-        <pre data-language={props.node.language}>
-          <code>{props.node.code}</code>
-        </pre>
-      )
-    }
+
+      mainImage: Image,
+    },
   }
 
 
@@ -63,7 +60,7 @@ export default function PostsGrid({ posts }: Props) {
                 <h2 className={styles.name}>{post.title}</h2>
                 <p className={styles.title}>
 
-                  <span className={styles.company}>{post.excerpt && <BlockContent blocks={post.excerpt} serializers={serializers} />}</span>
+                  <span className={styles.company}>{post.exceprt && <BlockContent blocks={post.exceprt} serializers={serializers} />}</span>
                 </p>
               </div>
             </div>
