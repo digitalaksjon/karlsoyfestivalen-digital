@@ -50,7 +50,7 @@
   text-shadow: 2px 2px #FDFBF9;
   color: #F0604C;
   backdrop-filter: blur(10px);
-
+  background-color: rgba(253, 251, 249, 0.2);
   border:2px dashed #FDFBF9;
    
 }
@@ -219,7 +219,7 @@
   .manifest {
     width: 30%;
     margin-top: 0px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
 
