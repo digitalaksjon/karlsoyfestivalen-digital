@@ -31,7 +31,7 @@ type Props = {
 
 export default function Jobs({ jobs }: Props) {
   const meta = {
-    title: 'Bli med!',
+    title: 'Bli med å lage festival!',
     description: META_DESCRIPTION
   };
 
