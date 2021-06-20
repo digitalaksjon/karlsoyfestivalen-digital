@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ import Header from '@components/header';
 
 
 import { useState } from 'react';
@@ -59,6 +60,8 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
+              <Header hero="Nyheter" description="Siste nytt fra festivalen" />
+
               <PostsGrid posts={posts} />
               <Form />
 

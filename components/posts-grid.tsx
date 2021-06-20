@@ -22,6 +22,7 @@ import { urlFor } from '@lib/cms-api';
 import BlockContent from '@sanity/block-content-to-react'
 
 
+
 type Props = {
   posts: Post[];
 };
