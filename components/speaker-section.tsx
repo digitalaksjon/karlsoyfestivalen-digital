@@ -80,11 +80,11 @@ export default function SpeakerSection({ speaker }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Instagram   size={24} />
+                <Instagram color="#FDFBF9"  size={24} />
               </a>
             ) : (
               <span className={styles.disabled}>
-                <Instagram size={24} />
+                <Instagram color="#FDFBF9" size={24} />
               </span>
             )}
             {speaker.github ? (
@@ -95,11 +95,11 @@ export default function SpeakerSection({ speaker }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Facebook color="#D8D8D8" size={22} />
+                <Facebook color="#FDFBF9" size={22} />
               </a>
             ) : (
               <span className={cn(styles.githubIcon, styles.disabled)}>
-                <Facebook color="#D8D8D8" size={22} />
+                <Facebook color="#FDFBF9" size={22} />
               </span>
             )}
           </div>
