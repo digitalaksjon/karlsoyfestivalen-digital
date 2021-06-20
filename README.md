@@ -1,22 +1,9 @@
-# Virtual Event Starter Kit
+# Karlsøyfestivalen Digital
 
-[Live demo](https://sanity-template-nextjs-event-starter.vercel.app)
+[Live ](https://karlsoyfestivalen.no)
 
-This virtual event starter kit was used to run Next.js Conf 2020, which had almost 40,000 live attendees. It includes the following features:
+Karlsøyfestivalens digitale festivalplass!
 
-- Multiple stages with an embedded YouTube stream
-- Sponsor expo, including individual virtual booths
-- Career Fair, allowing attendees to network and find job opportunties
-- Ticket registration and generation
-- Speaker pages and bios
-- Schedule
-- Built-in CMS ([sanity.io](https://www.sanity.io)) for managing content
-
-This platform is built upon three principles:
-
-- **Delegation:** Running a conference is difficult – you have to **delegate** tasks to third-parties to ensure success. Certain elements of an online conference experience are tough to get right, and we'd rather lean on established, industry leading solutions.
-- **Flexibility:** While delegating certain elements of the conference experience is helpful, it's also important to own the platform. That's why this template provides a **flexible** open-source codebase that can be modified for your event.
-- **Reducing Risk:** It's inevitable something will go wrong during your event. This platform **reduces risk** by leaning on a dynamic site that outputs as static files. These static files are cached, ensuring your site is never down. Then, it uses [Serverless Functions](https://vercel.com/docs/serverless-functions/introduction) to sprinkle dynamic content on top, which are hosted by a provider with 99.99% uptime.
 
 ### Built With
 
@@ -24,7 +11,7 @@ This platform is built upon three principles:
   - [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support)
   - [TypeScript](https://nextjs.org/docs/basic-features/typescript)
 - CMS: [Sanity.io](https://www.sanity.io)
-- Videos: [YouTube](https://www.youtube.com)
+- Videos: [Vimeo](https://www.vimeo.com)
 - Deployment: [Vercel](https://vercel.com)
 
 ## Running Locally
