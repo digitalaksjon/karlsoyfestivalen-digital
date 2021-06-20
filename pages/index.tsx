@@ -33,6 +33,7 @@ import { Post } from '@lib/types';
 import { GetStaticProps } from "next";
 
 
+
 import image1 from '../public/bakgrunn1.jpg';
 import image2 from '../public/bakgrunn2.jpg';
 import image3 from '../public/bakgrunn3.jpg';

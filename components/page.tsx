@@ -18,6 +18,7 @@ import cn from 'classnames';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+
 import { SITE_NAME, SITE_URL, TWITTER_USER_NAME } from '@lib/constants';
 
 type Meta = {
@@ -33,7 +34,10 @@ type Props = {
   fullViewport?: boolean;
 };
 
+
 export default function Page({ meta, children, fullViewport = false }: Props) {
+ 
+
   const router = useRouter();
   const image = meta.image || '/twitter-card.png';
   const title = meta.title || SITE_NAME;
@@ -68,14 +72,20 @@ export default function Page({ meta, children, fullViewport = false }: Props) {
             content={image}
           />
         )}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98723814-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
+        <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-98723814-1" >
+    </script>
+    <script dangerouslySetInnerHTML={
+        { __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments)}
+            gtag("js", new Date());
+            gtag("config", "UA-98723814-1");
+        `}
+    }>
+    </script>
 
-          gtag('config', 'UA-98723814-1');
-        </script>
 
       </Head>
       {children}
