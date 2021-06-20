@@ -56,10 +56,11 @@
 .card:hover,
 .card:focus {
   outline: none;
-  background-image: linear-gradient(#111111, #111111),
-    linear-gradient(to right, var(--brand), var(--brand));
+      background-color: #111111;
+      transform:scale(1.005);
+      transition: all 0.2s ease-in-out;
+  
 }
-
 .cardBody {
   padding: var(--space-4x);
   color: var(--secondary-color);

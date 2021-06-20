@@ -32,7 +32,7 @@ type Props = {
 export default function Speakers({ posts }: Props) {
   const meta = {
     title: 'Nytt fra festivalen',
-    description: META_DESCRIPTION
+    description: "Her kommer det informasjon fra festivalen fortløpende"
   };
   return (
     <Page meta={meta}>

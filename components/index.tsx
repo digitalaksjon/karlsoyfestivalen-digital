@@ -60,9 +60,9 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
-              <Header hero="Nyheter" description="Siste nytt fra festivalen" />
+              <Header hero="Nyheter" description="Siste nytt fra Karlsøyfestivalen" style={{  borderTop: '5px solid #F0604C'}} />
 
-              <PostsGrid posts={posts} />
+              <PostsGrid posts={posts}/>
               <Form />
 
               <LearnMore />

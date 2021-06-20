@@ -32,7 +32,7 @@ type Props = {
 export default function ExpoPage({ sponsors }: Props) {
   const meta = {
     title: 'Våre venner i kampen for en bedre verden',
-    description: META_DESCRIPTION
+    description: "Disse aktørene er en del av den sosiale veven rundt festivalen"
   };
 
   return (

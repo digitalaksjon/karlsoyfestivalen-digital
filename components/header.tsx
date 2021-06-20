@@ -19,13 +19,15 @@ import styles from './header.module.css';
 type Props = {
   hero: React.ReactNode;
   description: React.ReactNode;
+  style?: React.CSSProperties;
+
 };
 
-export default function Header({ hero, description }: Props) {
+export default function Header({ hero, description, style }: Props) {
   return (
-    <>
+    <div style={style}>
       <h1 className={styles.hero}>{hero}</h1>
       <p className={styles.description}>{description}</p>
-    </>
+    </div>
   );
 }
