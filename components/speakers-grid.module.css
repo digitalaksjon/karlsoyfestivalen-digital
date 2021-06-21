@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(#111111, #111111), linear-gradient(to right, #333333, #333333);
+  background-image: linear-gradient(#433B35, #433B35), linear-gradient(to right, #333333, #333333);
   padding: 1px;
   cursor: pointer;
 }
@@ -58,7 +58,7 @@
   outline: none;
       background-color: #111111;
       transform:scale(1.005);
-      transition: all 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
   
 }
 .cardBody {
@@ -92,6 +92,7 @@
   color: #f1f1f1;
   font-size: 20px;
   margin: 0;
+
   line-height: 1.4;
 }
 

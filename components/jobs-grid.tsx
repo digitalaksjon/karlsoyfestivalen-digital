@@ -28,9 +28,9 @@ function CompanyJobs({ jobs }: Props) {
         <a
           key={job.id}
           className={styles.card}
-          href="#"
           target="_blank"
           rel="noopener noreferrer"
+          
         >
           <div className={styles.cardBody}>
             <div>
