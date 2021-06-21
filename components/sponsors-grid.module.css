@@ -24,6 +24,7 @@
   padding: 1px;
   margin-bottom: 30px;
   cursor: pointer;
+  
 }
 
 .card:hover,
@@ -64,6 +65,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
 }
 
 .imageWrapper {
@@ -97,4 +99,9 @@
   margin-top: var(--space);
   margin-bottom: 0;
   line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
