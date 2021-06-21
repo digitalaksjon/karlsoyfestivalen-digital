@@ -217,5 +217,7 @@
 
   .image {
     margin: 0 24px 0 0;
+ 
+    background-color: #fff;
   }
 }

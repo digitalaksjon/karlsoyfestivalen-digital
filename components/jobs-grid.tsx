@@ -75,8 +75,7 @@ export default function JobsGrid({ jobs }: Props) {
       {Object.keys(companies).map((companyName: string) => (
         <div key={companyName} className={styles.companyRow}>
           <div className={styles.rowHeader}>
-            <h2 className={styles.companyName}>{companyName}</h2>
-           
+      
           </div>
           <CompanyJobs jobs={companies[companyName]} />
         </div>
