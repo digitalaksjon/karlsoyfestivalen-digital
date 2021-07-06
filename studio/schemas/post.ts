@@ -30,7 +30,7 @@ export default {
     {
       name: 'featuredImage',
       type: 'image',
-      title: 'Main image'
+      title: 'Featured image'
     },
     {
       name: 'excerpt',

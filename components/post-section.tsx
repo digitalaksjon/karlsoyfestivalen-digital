@@ -22,6 +22,8 @@ import BlockContent from '@sanity/block-content-to-react'
 import { Post } from '@lib/types';
 import styles from './post-section.module.css';
 import { urlFor } from '@lib/cms-api';
+import image from 'next/image';
+import { getStaticProps } from 'pages/nyheter';
 
 
 type Props = {
@@ -35,16 +37,18 @@ var monthNames = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
 ];
 
 
+
+const serializers = {
+  types: {
+
+    mainImage: image
+  }
+}
+
 export default function PostSection({ post }: Props) {
 
-  const serializers = {
-    types: {
-
-      mainImage: Image,
-    },
-  }
-
   const dateObject = new Date(post.publishedAt);
+
   return (
     <>
       <Link href="/nyheter">
@@ -76,7 +80,6 @@ export default function PostSection({ post }: Props) {
             width={600}
             height={600}
 
-    
           />
         </div>
 

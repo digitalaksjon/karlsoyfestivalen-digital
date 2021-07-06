@@ -10,6 +10,7 @@ export default {
       name: 'caption',
       type: 'string',
       title: 'Caption',
+      src: 'asset.url',
       options: {
         isHighlighted: true
       }

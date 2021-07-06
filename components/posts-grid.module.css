@@ -23,7 +23,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 24px;
+  grid-gap: 20px;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
@@ -32,13 +32,7 @@
 
 }
 
-@media (min-width: 768px) {
-  .grid {
-    padding: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 25%));
-  }
 
-}
 
 .grid::-webkit-scrollbar {
   display: none;
@@ -76,7 +70,7 @@
 
 .imageWrapper {
   width: 100%;
-
+  
 }
 
 .image {
@@ -85,6 +79,30 @@
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
+
+@media (min-width: 768px) {
+  .grid {
+    padding: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 24%));
+  }
+
+  .card {
+    max-width: 25vw;
+  }
+  .card div {
+    display: block !important;
+    
+  }
+  .card div img {
+    width: 100%;
+    
+  }
+
+
+  
+
+}
+
 
 @media (max-width: 471px) {
   .imageWrapper > div {
