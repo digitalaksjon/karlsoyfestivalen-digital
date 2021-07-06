@@ -9,7 +9,7 @@ export default {
       professionalTitle: 'title',
       media: 'image'
     },
-    prepare: ({title, company = '', professionalTitle = '', media}) => {
+    prepare: ({ title, company = '', professionalTitle = '', media }) => {
       return {
         title,
         media,
@@ -25,7 +25,7 @@ export default {
     },
     {
       name: 'bio',
-      type: 'text',
+      type: 'excerptPortableText',
       title: 'Biography'
     },
     {

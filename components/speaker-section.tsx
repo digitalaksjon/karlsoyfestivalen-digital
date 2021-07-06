@@ -22,11 +22,21 @@ import Facebook from '@components/icons/icon-linkedin';
 import { Speaker } from '@lib/types';
 import styles from './speaker-section.module.css';
 import { urlFor } from '@lib/cms-api';
+import image from 'next/image';
+import BlockContent from '@sanity/block-content-to-react'
 
 
 type Props = {
   speaker: Speaker;
 };
+
+const serializers = {
+  types: {
+
+    mainImage: image
+  }
+}
+
 
 export default function SpeakerSection({ speaker }: Props) {
   return (
@@ -59,7 +69,7 @@ export default function SpeakerSection({ speaker }: Props) {
             layout="intrinsic"
             width={600}
             height={600}
-        
+
           />
         </div>
 
@@ -71,7 +81,7 @@ export default function SpeakerSection({ speaker }: Props) {
               <span className={styles.company}>{speaker.company}</span>
             </p>
             <h2 className={styles['bio-header']}>Bio</h2>
-            <p className={styles.bio}>{speaker.bio}</p>
+            <p className={styles.bio}> {speaker.bio && <BlockContent blocks={speaker.bio} serializers={serializers} />}</p>
             <h3 className={styles['socials-header']}>{speaker.name} i sosiale medier</h3>
             {speaker.twitter ? (
               <a
@@ -105,7 +115,7 @@ export default function SpeakerSection({ speaker }: Props) {
           </div>
         </div>
       </div>
-      
+
     </>
   );
 }
