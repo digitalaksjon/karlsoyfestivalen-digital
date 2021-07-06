@@ -32,7 +32,7 @@ type Props = {
 export default function Speakers({ speakers }: Props) {
   const meta = {
     title: 'Artister, kunstnere og andre bidragsytere',
-    description: META_DESCRIPTION
+    description: "Her finner du informasjon om det som skjer på årets festival"
   };
   return (
     <Page meta={meta}>

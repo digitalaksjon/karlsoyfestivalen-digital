@@ -34,7 +34,7 @@ export default function Hero() {
         </p>
       </div>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
-        <div>Mari Boine / Polardegos / Ohnesorg / Karlsøy Prestegaard / Roastfish & Cornbread Sound System / MoE / Hotbox / One Family / Kunstkollektivet Støy / Barnemakt / Slampoesi / Galleri Carlsö / Jemterud + Brungot Trio / Bens Bluesband / Barnas Gourmetkjøkken / Filmverksted / Plantesafari / Marinert villsau / Folkekjøkken / OLi OOO Village CarlsØ </div>
+        <div>Mari Boine <span>|</span> Polardegos <span>|</span> Jan Steigen <span>|</span>  Ohnesorg <span>|</span>  Karlsøy Prestegaard <span>|</span>  Roastfish & Cornbread Sound System <span>|</span>  MoE <span>|</span>  Hotbox <span>|</span>  One Family <span>|</span>  Kunstnerkollektivet Støy <span>|</span>  Barnemakt! <span>|</span> Utstilling på Galleri Carlsö <span>|</span>  Jemterud / Brungot / Trio <span>|</span>  Bens Bluesband <span>|</span>  Barnas Gourmetkjøkken og mye mye mer</div>
       </h1>
       <h2
         className={cn(
@@ -47,7 +47,7 @@ export default function Hero() {
         {SITE_DESCRIPTION}
       </h2>
       <div className={cn(styleUtils.appear, styleUtils['appear-forth'], styles.metawrapper)}>
-        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://vimeo.com/showcase/8565618/embed?autoplay=1&muted=1" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://player.vimeo.com/video/562882348?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
         <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.manifest)}>
           <div className={cn(styles.inner_manifest)}>
             <h2>KARLSØYFESTIVALENS MANIFEST</h2>

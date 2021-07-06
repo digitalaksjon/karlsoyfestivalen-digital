@@ -18,6 +18,7 @@
   margin-top: var(--space-12x);
   width: 100%;
   margin: 30vh auto;
+
 }
 
 
@@ -49,7 +50,7 @@
   text-shadow: 2px 2px #FDFBF9;
   color: #F0604C;
   backdrop-filter: blur(10px);
-
+  background-color: rgba(253, 251, 249, 0.2);
   border:2px dashed #FDFBF9;
    
 }
@@ -69,6 +70,7 @@
 
 .info {
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.4;
   text-transform: uppercase;
   display: flex;
@@ -84,6 +86,7 @@
 
 .description {
   font-weight: 400;
+  display: none;
   font-size: 16px;
   line-height: 1.4;
   text-align: center;
@@ -196,6 +199,7 @@
   
   .iframes {
     width: 70%;
+
   }
 
   .iframes iframe {
@@ -207,7 +211,7 @@
   .info {
     font-size: 24px;
     margin-bottom: 80px;
-    width: 40%;
+    width: 80%;
     
   }
 
@@ -215,7 +219,7 @@
   .manifest {
     width: 30%;
     margin-top: 0px;
-    font-size: 18px;
+    font-size: 15px;
   }
 
 

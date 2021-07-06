@@ -23,15 +23,17 @@ import Layout from '@components/layout';
 import { getAllSponsors } from '@lib/cms-api';
 import { Sponsor } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
-
+import { urlFor } from '@lib/cms-api';
 type Props = {
   sponsor: Sponsor;
 };
 
 export default function SponsorPage({ sponsor }: Props) {
+  const image = urlFor(sponsor.cardImage).width(1000);
   const meta = {
     title: sponsor.name,
-    description: META_DESCRIPTION
+    description: META_DESCRIPTION,
+    image: image.toString()
   };
 
   return (

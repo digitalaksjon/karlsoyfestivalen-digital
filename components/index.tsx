@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ import Header from '@components/header';
+
 
 import { useState } from 'react';
 import { PageState, ConfDataContext, UserData } from '@lib/hooks/use-conf-data';
@@ -22,8 +24,15 @@ import ConfContainer from './conf-container';
 import Hero from './hero';
 import Form from './form';
 import LearnMore from './learn-more';
+import PostsGrid from '@components/posts-grid';
+import { META_DESCRIPTION } from '@lib/constants';
+
+import { Post } from '@lib/types';
+
+
 
 type Props = {
+  posts: Post[];
   defaultUserData: UserData;
   sharePage?: boolean;
   defaultPageState?: PageState;
@@ -32,6 +41,7 @@ type Props = {
 export default function Conf({
   defaultUserData,
   sharePage,
+  posts,
   defaultPageState = 'registration'
 }: Props) {
   const [userData, setUserData] = useState<UserData>(defaultUserData);
@@ -50,7 +60,11 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
+              <Header hero="Nyheter" description="Siste nytt fra Karlsøyfestivalen" style={{  borderTop: '5px solid #F0604C', marginTop: '0px'}} />
+
+              <PostsGrid posts={posts}/>
               <Form />
+
               <LearnMore />
             </>
           ) : (
@@ -66,3 +80,5 @@ export default function Conf({
     </ConfDataContext.Provider>
   );
 }
+
+

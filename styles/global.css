@@ -161,3 +161,7 @@ svg circle {
   height: auto;
   clip: auto;
 }
+
+.box-gallery {
+  border-bottom: 10px solid #F0604C
+}

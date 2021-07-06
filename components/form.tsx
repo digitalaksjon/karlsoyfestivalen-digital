@@ -145,6 +145,7 @@ export default function Form({ sharePage }: Props) {
             placeholder="Skriv inn din e-post for å melde deg på"
             aria-label="Your email address"
             required
+            disabled
           />
         </label>
         <button

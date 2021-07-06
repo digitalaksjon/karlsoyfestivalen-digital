@@ -28,15 +28,16 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background-color: #FDFBF9;
+  background-color: rgba(253, 251, 249,0.9);
 
 }
 
 @media (min-width: 768px) {
   .grid {
     padding: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 25%));
   }
+
 }
 
 .grid::-webkit-scrollbar {
@@ -45,12 +46,12 @@
 
 .card {
   border-radius: var(--space-2x);
-  background: #111111;
+
   display: flex;
   max-width: 400px;
   flex-direction: column;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(#111111, #111111), linear-gradient(to right, #333333, #333333);
+  background-color: #433B35;
   padding: 1px;
   cursor: pointer;
 }
@@ -58,8 +59,10 @@
 .card:hover,
 .card:focus {
   outline: none;
-  background-image: linear-gradient(#111111, #111111),
-    linear-gradient(to right, var(--brand), var(--brand));
+      background-color: #6D645C;
+      transform:scale(1.005);
+      transition: all 0.3s ease-in-out;
+  
 }
 
 .cardBody {
@@ -73,11 +76,11 @@
 
 .imageWrapper {
   width: 100%;
-  height: 100%;
+
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
   
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -92,21 +95,35 @@
 .name {
   font-weight: bold;
 
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 900;
-  text-transform: uppercase;
+
     margin: 0;
-  text-align: center;
+
   line-height: 1.4;
   color: #FDFBF9;
-  text-shadow: 2px 2px 0 #F0604C;
 
 }
 
+@media (min-width: 768px) {
+
+  .name {
+    font-size: 26px;
+  }
+}
+
+
 .company {
-  font-size: 14px;
-  text-align: center;
+  font-size: 16px;
+
   color: #f1f1f1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  
+
 }
 
 .title {

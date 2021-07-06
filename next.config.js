@@ -26,6 +26,7 @@
 
 const withImages = require('next-images')
 module.exports = withImages({
+  fileExtensions: ["jpg", "jpeg", "png", "gif"],
   images: {
     domains: ['cdn.sanity.io'],
     imageSizes: [24, 64, 300]

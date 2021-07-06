@@ -186,7 +186,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
         >
           <div className={ticketFormStyles.generateWithGithub}>
             <span className={ticketFormStyles.githubIcon}>
-              <GithubIcon color="#fff" size={24} />
+              <GithubIcon size={24} />
             </span>
             {formState === 'loading' ? (
               <LoadingDots size={4} />

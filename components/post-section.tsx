@@ -72,9 +72,11 @@ export default function PostSection({ post }: Props) {
             title={post.title}
             src={urlFor(post.featuredImage).width(600).height(600).url() || ''}
             className={styles.image}
-            layout="fill"
+            layout="intrinsic"
+            width={600}
+            height={600}
 
-
+    
           />
         </div>
 
@@ -86,9 +88,9 @@ export default function PostSection({ post }: Props) {
             }}></p>
 
 
-            <p className={styles.bio}>
+            <div className={styles.bio}>
               {post.body && <BlockContent blocks={post.body} serializers={serializers} />}
-            </p>
+            </div>
           </div>
         </div>
       </div>

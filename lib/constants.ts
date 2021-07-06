@@ -43,8 +43,8 @@ export const NAVIGATION = [
     route: '/artist'
   },
   {
-    name: 'Frivillig',
-    route: '/frivillig'
+    name: 'Deltaker',
+    route: '/deltaker'
   },
   {
     name: 'Om oss',

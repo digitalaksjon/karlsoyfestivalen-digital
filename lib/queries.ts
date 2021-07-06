@@ -22,7 +22,7 @@ export const getAllPostsQuery = groq`*[_type == "post"]{
         publishedAt,
         body,
         featuredImage
-      }`
+      }|order(publishedAt desc)`
 
 export const getAllStagesQuery = groq`*[_type == "stage"]{
         name,

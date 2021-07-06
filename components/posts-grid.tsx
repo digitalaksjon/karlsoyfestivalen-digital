@@ -22,12 +22,14 @@ import { urlFor } from '@lib/cms-api';
 import BlockContent from '@sanity/block-content-to-react'
 
 
+
 type Props = {
   posts: Post[];
+  style?: React.CSSProperties;
 };
 
 
-export default function PostsGrid({ posts }: Props) {
+export default function PostsGrid({ posts, style }: Props) {
   const serializers = {
     types: {
 
@@ -38,7 +40,7 @@ export default function PostsGrid({ posts }: Props) {
 
 
   return (
-    <div className={styles.grid}>
+    <div className={styles.grid} style={style}>
       {posts.map(post => (
         <Link key={post.title} href={`/nyheter/${post.slug}`}>
           <a role="button" tabIndex={0} className={styles.card}>

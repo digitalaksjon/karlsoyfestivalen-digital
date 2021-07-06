@@ -48,16 +48,18 @@ export default function SponsorSection({ sponsor }: Props) {
         </a>
       </Link>
       <div className={styles.layout}>
-        <iframe
-          className={cn(styles.video, styleUtils.appear, styleUtils['appear-first'])}
-          allow="picture-in-picture"
-          allowFullScreen
-          frameBorder="0"
-          height="100%"
-          src={`https://youtube.com/embed/${sponsor.youtubeSlug}`}
-          title={sponsor.name}
-          width="100%"
-        />
+        <div className={cn(styles.video)}>
+          <Image
+              alt={sponsor.name}
+              src={urlFor(sponsor.cardImage).width(700).height(500).url() || ''}
+          
+              loading="lazy"
+              title={sponsor.name}
+              width={700}
+              height={500}
+              layout="intrinsic"
+            />
+        </div>
         <div className={styles.container}>
           <div className={styles['name-and-logo']}>
             <Image
@@ -72,29 +74,10 @@ export default function SponsorSection({ sponsor }: Props) {
             <h1 className={styles.name}>{sponsor.name}</h1>
           </div>
           <p className={styles.description}>{sponsor.description}</p>
-          <div className={styles['sponsor-details']}>
-            <a
-              href={sponsor.callToActionLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              type="button"
-              className={styles.button}
-            >
-              {sponsor.callToAction}
-            </a>
-            <a
-              href={sponsor.discord}
-              target="_blank"
-              rel="noopener noreferrer"
-              type="button"
-              className={cn(styles.button, styles['button-link'])}
-            >
-              Chat on Discord
-            </a>
-          </div>
+ 
           <div className={styles.resources}>
-            <h2 className={styles.heading}>Resources</h2>
-            {sponsor.links.map(link => (
+            <h2 className={styles.heading}>Linker</h2>
+            {sponsor.links && sponsor.links.map(link => (
               <a
                 key={link.url}
                 href={link.url}

@@ -23,15 +23,20 @@ import Layout from '@components/layout';
 import { getAllSpeakers } from '@lib/cms-api';
 import { Speaker } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
+import { urlFor } from '@lib/cms-api';
 
 type Props = {
   speaker: Speaker;
 };
 
 export default function SpeakerPage({ speaker }: Props) {
+  const image = urlFor(speaker.image).width(1000);
+
+
   const meta = {
     title: speaker.name,
-    description: META_DESCRIPTION
+    description: META_DESCRIPTION,
+    image: image.toString()
   };
 
   return (

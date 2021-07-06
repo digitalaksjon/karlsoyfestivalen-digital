@@ -20,17 +20,20 @@
   display: flex;
   flex-direction: column;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(#111111, #111111), linear-gradient(to right, #333333, #333333);
+  background-image: linear-gradient(#433B35, #433B35), linear-gradient(to right, #333333, #333333);
   padding: 1px;
   margin-bottom: 30px;
   cursor: pointer;
+  
 }
 
 .card:hover,
 .card:focus {
   outline: none;
-  background-image: linear-gradient(#111111, #111111),
-    linear-gradient(to right, var(--brand), var(--brand));
+      background-color: #111111;
+      transform:scale(1.005);
+      transition: all 0.3s ease-in-out;
+  
 }
 
 .grid {
@@ -62,6 +65,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
 }
 
 .imageWrapper {
@@ -69,6 +73,7 @@
   height: 100%;
   position: relative;
   display: flex;
+  max-height: 300px;
 }
 
 .image {
@@ -94,4 +99,9 @@
   margin-top: var(--space);
   margin-bottom: 0;
   line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }

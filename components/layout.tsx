@@ -25,21 +25,9 @@ import EventName from './event-name';
 import MobileMenu from './mobile-menu';
 import Footer, { HostedByVercel } from './footer';
 import ViewSource from '@components/view-source';
-import BackgroundSlider from 'react-background-slider'
 
 
-import image1 from '../public/bakgrunn5.jpg';
-import image2 from '../public/bakgrunn2.jpg';
-import image3 from '../public/bakgrunn3.jpg';
-import image4 from '../public/bakgrunn4.jpg';
-import image5 from '../public/bakgrunn1.jpg';
-import image6 from '../public/bakgrunn6.jpg';
-import image7 from '../public/bakgrunn7.jpg';
-import image8 from '../public/bakgrunn8.jpg';
 
-const imageArray = [image1, image2, image3, image4, image5, image6, image7, image8];
-
-const randomImageArray = shuffle(imageArray);
 
 type Props = {
   children: React.ReactNode;
@@ -94,15 +82,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
             <SkipNavContent />
             <div className={cn(styles.full, className)}>
 
-              {(activeRoute === '/') ?
-                (
-
-                  <BackgroundSlider
-                    images={randomImageArray}
-                    duration={8} transition={1} />
-                ) :
-                ''
-              }
+  
               {children}
 
             </div>
@@ -114,22 +94,3 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
   );
 }
 
-function shuffle(array: string[]) {
-  var currentIndex = array.length, randomIndex;
-
-
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}

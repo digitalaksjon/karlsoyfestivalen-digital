@@ -19,6 +19,9 @@ import Error from 'next/error';
 import Head from 'next/head';
 import { SkipNavContent } from '@reach/skip-nav';
 import redis from '@lib/redis';
+import { Post } from '@lib/types';
+
+import { getAllPosts } from '@lib/cms-api';
 
 import Page from '@components/page';
 import ConfContent from '@components/index';
@@ -31,13 +34,14 @@ import {
 } from '@lib/constants';
 
 type Props = {
+  posts: Post[];
   username: string | null;
   usernameFromParams: string | null;
   name: string | null;
   ticketNumber: number | null;
 };
 
-export default function TicketShare({ username, ticketNumber, name, usernameFromParams }: Props) {
+export default function TicketShare({ username, ticketNumber, posts, name, usernameFromParams }: Props) {
   if (!ticketNumber) {
     return <Error statusCode={404} />;
   }
@@ -68,7 +72,9 @@ export default function TicketShare({ username, ticketNumber, name, usernameFrom
           name: name || '',
           ticketNumber
         }}
+        posts={posts}
         sharePage
+        
       />
     </Page>
   );
@@ -76,6 +82,7 @@ export default function TicketShare({ username, ticketNumber, name, usernameFrom
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const username = params?.username?.toString() || null;
+  const posts = await getAllPosts();
 
   if (redis) {
     if (username) {
@@ -85,6 +92,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
         return {
           props: {
             username: username || null,
+            posts: posts || null,
             usernameFromParams: username || null,
             name: name || username || null,
             ticketNumber: parseInt(ticketNumber, 10) || null
@@ -96,6 +104,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return {
       props: {
         username: null,
+        posts: posts,
         usernameFromParams: username || null,
         name: null,
         ticketNumber: null
@@ -106,6 +115,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return {
       props: {
         username: null,
+        posts: posts,
         usernameFromParams: username || null,
         name: null,
         ticketNumber: SAMPLE_TICKET_NUMBER
