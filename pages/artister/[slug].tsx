@@ -35,7 +35,7 @@ export default function SpeakerPage({ speaker }: Props) {
 
   const meta = {
     title: speaker.name,
-    description: META_DESCRIPTION,
+    description: speaker.title,
     image: image.toString()
   };
 

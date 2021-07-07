@@ -30,15 +30,16 @@ type Props = {
   speaker: Speaker;
 };
 
-const serializers = {
-  types: {
 
-    mainImage: image
-  }
-}
 
 
 export default function SpeakerSection({ speaker }: Props) {
+  const serializers = {
+    types: {
+
+      mainImage: image
+    }
+  }
   return (
     <>
       <Link href="/artist">
