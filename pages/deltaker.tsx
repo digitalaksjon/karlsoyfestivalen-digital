@@ -20,8 +20,7 @@ import { useEffect } from 'react';
 import Page from '@components/page';
 import Layout from '@components/layout';
 import Header from '@components/header';
-import router from 'next/router'
-import { useRouter } from 'next/router'
+import DeltakerSchema from '@components/deltaker-schema';
 
 export default function Deltaker() {
   const meta = {
@@ -33,25 +32,7 @@ export default function Deltaker() {
     <Page meta={meta}>
       <Layout>
         <Header hero="Registrer deg som deltaker" description={meta.description} />
-        <div id="checkin_registration"></div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(w, d) {
-              d.event_id = 34340;
-            var headTag = d.getElementsByTagName('head')[0];
-            var script = d.createElement('script');
-            script.src = 'https://registration.checkin.no/registration.loader.js';
-            script.async = 1;
-            script.crossOrigin = 1;
-            headTag.appendChild(script);
-            window.reload()
-   })(window, document);
-          `,
-          }}
-        />
-
-
+        <DeltakerSchema />
       </Layout>
     </Page>
   );
