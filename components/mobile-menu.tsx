@@ -42,7 +42,7 @@ function ModalDialog(props: Parameters<typeof useOverlay>[0] & Parameters<typeof
       <FocusScope contain restoreFocus autoFocus>
         <nav className={styles.nav} {...overlayProps} {...dialogProps} {...modalProps} ref={ref}>
           {NAVIGATION.map(({ name, route }) => (
-            <a key={name} href={route}>
+            <Link key={name} href={route}>
               <a
                 className={cn(styles['nav-item'], {
                   [styles['nav-active']]: activeRoute.startsWith(route)
@@ -50,7 +50,7 @@ function ModalDialog(props: Parameters<typeof useOverlay>[0] & Parameters<typeof
               >
                 {name}
               </a>
-            </a>
+            </Link>
           ))}
         </nav>
       </FocusScope>
