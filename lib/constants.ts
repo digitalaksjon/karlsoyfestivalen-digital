@@ -44,7 +44,7 @@ export const NAVIGATION = [
   },
   {
     name: 'Deltaker',
-    route: '/deltaker'
+    route: '/nyheter/karlsoyfestivalen-en-annerledes-opplevelse'
   },
   {
     name: 'Om oss',
