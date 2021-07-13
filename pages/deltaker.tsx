@@ -16,15 +16,19 @@
 
 import { GetStaticProps } from 'next';
 
+import { useEffect } from 'react';
 import Page from '@components/page';
 import Layout from '@components/layout';
 import Header from '@components/header';
+import router from 'next/router'
+import { useRouter } from 'next/router'
 
 export default function Deltaker() {
   const meta = {
     title: 'Deltaker',
     description: "Bli med å skape en fantastisk opplevelse på Karlsøya"
   };
+
   return (
     <Page meta={meta}>
       <Layout>
@@ -41,6 +45,7 @@ export default function Deltaker() {
             script.async = 1;
             script.crossOrigin = 1;
             headTag.appendChild(script);
+            window.reload()
    })(window, document);
           `,
           }}
