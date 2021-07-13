@@ -21,20 +21,19 @@ import { useRouter } from 'next/router';
 
 export default function DeltakerSchema() {
 
-    return () => {
-        const router = useRouter();
+    const router = useRouter();
 
-        useEffect(() => {
-            router.push("/deltaker");
-        });
+    useEffect(() => {
+        router.push("/deltaker");
+    });
 
 
-        return (
-            <div className="container">
-                <div id="checkin_registration"></div>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
+    return (
+        <div className="container">
+            <div id="checkin_registration"></div>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
             (function(w, d) {
               d.event_id = 34340;
             var headTag = d.getElementsByTagName('head')[0];
@@ -46,11 +45,10 @@ export default function DeltakerSchema() {
             window.reload()
    })(window, document);
           `,
-                    }}
-                />
+                }}
+            />
 
-            </div>
-        );
-    }
+        </div>
+    );
 
 }
