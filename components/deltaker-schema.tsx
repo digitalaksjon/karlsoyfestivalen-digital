@@ -25,7 +25,8 @@ export default function DeltakerSchema() {
 
     useEffect(() => {
         router.push("/deltaker");
-    });
+
+    }, []);
 
 
     return (
