@@ -8,8 +8,8 @@ export const META_DESCRIPTION =
   'Karlsøyfestivalen er en global digital festival med mening!';
 export const SITE_DESCRIPTION =
   'Velkommen tilbake til Karlsøya!';
-export const DATE = '5. - 8. august 2021';
-export const SHORT_DATE = '5. - 8. august';
+export const DATE = '3. - 8. august 2021';
+export const SHORT_DATE = '3. - 8. august';
 export const FULL_DATE = 'Aug 3rd 12am CET (GMT+1)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
