@@ -102,6 +102,12 @@
     
     
   }
+  .name {
+
+    width: 80%;
+ 
+  }
+  
 
   .imageContainer {
     position: relative;
