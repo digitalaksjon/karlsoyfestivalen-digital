@@ -43,7 +43,6 @@ const serializers = {
   types: {
 
     mainImage(props) {
-
       return (<Image
         alt={props.node.alt}
         title={props.node.caption}
