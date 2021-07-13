@@ -86,8 +86,5 @@
     "os": false,
     "net": false,
     "tls": false
-  },
-  "optionalDependencies": {
-    "fsevents": "*"
- },
+  }
 }
