@@ -25,13 +25,12 @@ export default function DeltakerSchema() {
     const router = useRouter();
     // Call this function whenever you want to
     // refresh props!
-    const refreshData = () => {
+    useEffect(() => {
         router.replace(router.asPath);
-    }
+      });
 
-    useEffect => {
-        refreshData();
-    }
+    //...
+
 
     return (
         <div className="container">
@@ -47,8 +46,9 @@ export default function DeltakerSchema() {
             script.async = 1;
             script.crossOrigin = 1;
             headTag.appendChild(script);
-            w.reload()
+          
    })(window, document);
+
           `,
                 }}
             />
