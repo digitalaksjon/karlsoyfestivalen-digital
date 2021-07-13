@@ -22,14 +22,6 @@ import { useEffect } from 'react';
 
 export default function DeltakerSchema() {
 
-    const router = useRouter();
-    // Call this function whenever you want to
-    // refresh props!
-    useEffect(() => {
-        router.replace(router.asPath);
-      });
-
-    //...
 
 
     return (
