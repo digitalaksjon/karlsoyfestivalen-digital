@@ -23,6 +23,7 @@ import { Post } from '@lib/types';
 import styles from './post-section.module.css';
 import { urlFor } from '@lib/cms-api';
 import image from 'next/image';
+
 import { getStaticProps } from 'pages/nyheter';
 
 
@@ -41,7 +42,19 @@ var monthNames = ["Januar", "Februar", "Mars", "April", "Mai", "Juni",
 const serializers = {
   types: {
 
-    mainImage: image
+    mainImage(props) {
+
+      return (<Image
+        alt={props.node.alt}
+        title={props.node.caption}
+        src={urlFor(props.node.asset).width(800).height(300).url() || ''}
+        className={styles.image}
+        layout="intrinsic"
+        width={800}
+        height={300}
+      />)
+
+    }
   }
 }
 
