@@ -7,7 +7,7 @@
   "homepage": "https://karlsoyfestivalen.no",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^14.0.0",
+    "node": "^14.x",
     "npm": "7.4.0"
   },
   "scripts": {
