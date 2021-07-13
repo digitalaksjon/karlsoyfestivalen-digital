@@ -184,15 +184,20 @@
   
   color: #F0604C;
 }
-
+.bio button {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #F0604C;
+}
 .bio button a { 
   font-size: 1.6em;
   font-weight: bold;
   padding: 0 40px;
+
 }
 
-.bio button a:hover { 
-  background-color: #F0604C;
-  color: #ffffff !important;
+.bio button:hover { 
+  background-color: #433B35;
+
 }
 
