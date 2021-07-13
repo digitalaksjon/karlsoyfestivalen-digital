@@ -6,10 +6,7 @@
   "author": "Digital Aksjon",
   "homepage": "https://karlsoyfestivalen.no",
   "license": "Apache-2.0",
-  "engines": {
-    "node": "^14.x",
-    "npm": "7.4.0"
-  },
+
   "scripts": {
     "dev": "concurrently \"next --port 3000\" \"cd studio && sanity start\"",
     "start": "vercel dev",
