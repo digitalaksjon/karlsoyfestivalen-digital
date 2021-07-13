@@ -42,7 +42,7 @@ export default function DeltakerSchema() {
             script.async = 1;
             script.crossOrigin = 1;
             headTag.appendChild(script);
-            window.reload()
+
    })(window, document);
           `,
                 }}
