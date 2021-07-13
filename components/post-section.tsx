@@ -43,15 +43,20 @@ const serializers = {
   types: {
 
     mainImage(props) {
-      return (<Image
-        alt={props.node.alt}
-        title={props.node.caption}
-        src={urlFor(props.node.asset).width(800).height(300).url() || ''}
-        className={styles.image}
-        layout="intrinsic"
-        width={800}
-        height={300}
-      />)
+      return (<div>
+        <Image
+          alt={props.node.alt}
+          title={props.node.caption}
+          src={urlFor(props.node.asset).width(800).height(300).url() || ''}
+          className={styles.image}
+          layout="intrinsic"
+          width={800}
+          height={300}
+        />
+        <div className="caption">
+          {props.node.caption}
+        </div>
+      </div>)
 
     }
   }

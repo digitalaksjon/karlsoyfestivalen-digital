@@ -59,6 +59,17 @@
   font-size: 1.1em;
 }
 
+.bio div div {
+  font-weight: normal;
+  font-size: 0.9em;
+  text-align: right;
+  
+
+}
+
+
+
+
 .image {
   border-radius: var(--space-2x);
   ;
@@ -81,6 +92,7 @@
     line-height: 1.2;
   }
   
+
   
 
 @media (min-width: 768px) {
@@ -166,3 +178,4 @@
   
   color: #F0604C;
 }
+
