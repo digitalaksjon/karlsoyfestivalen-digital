@@ -93,7 +93,19 @@
   }
   
 
+  .bio button {
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    border: 2px solid #F0604C;
+  }
+  .bio button a { 
+    font-size: 1.6em;
+    
+    font-weight: bold;
+
   
+  }
 
 @media (min-width: 768px) {
   .container {
@@ -108,7 +120,12 @@
  
   }
   
-
+  .bio button a { 
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 0 40px;
+  
+  }
   .imageContainer {
     position: relative;
     max-height: 600px;
@@ -183,21 +200,5 @@
 .date {
   
   color: #F0604C;
-}
-.bio button {
-  margin: 0 auto;
-  display: block;
-  border: 1px solid #F0604C;
-}
-.bio button a { 
-  font-size: 1.6em;
-  font-weight: bold;
-  padding: 0 40px;
-
-}
-
-.bio button:hover { 
-  background-color: #433B35;
-
 }
 
