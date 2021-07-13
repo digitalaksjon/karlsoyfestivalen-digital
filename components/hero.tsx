@@ -34,7 +34,7 @@ export default function Hero() {
         </p>
       </div>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
-        <div>Mari Boine <span>|</span> Polardegos <span>|</span> Jan Steigen <span>|</span>  Ohnesorg <span>|</span>  Karlsøy Prestegaard <span>|</span>  Roastfish & Cornbread Sound System <span>|</span>  MoE <span>|</span>  Hotbox <span>|</span>  One Family <span>|</span>  Kunstnerkollektivet Støy <span>|</span>  Barnemakt! <span>|</span> Utstilling på Galleri Carlsö <span>|</span>  Jemterud / Brungot / Trio <span>|</span>  Bens Bluesband <span>|</span>  Barnas Gourmetkjøkken og mye mye mer</div>
+        <div>Mari Boine <span>|</span> Polardegos <span>|</span> Jan Steigen <span>|</span>  Ohnesorg <span>|</span>  Roastfish & Cornbread Sound System <span>|</span>  MoE <span>|</span>  Hotbox <span>|</span>  One Family <span>|</span>  Kunstnerkollektivet Støy <span>|</span>  Barnemakt! <span>|</span> Utstilling på Galleri Carlsö <span>|</span>  Jemterud / Brungot / Trio <span>|</span>  Bens Bluesband <span>|</span>  Barnas Gourmetkjøkken og mye mye mer</div>
       </h1>
       <h2
         className={cn(
