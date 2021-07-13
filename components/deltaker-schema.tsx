@@ -16,17 +16,8 @@
  * limitations under the License.
  */
 
-import React, { useEffect } from "react";
-import { useRouter } from 'next/router';
-
 export default function DeltakerSchema() {
 
-    const router = useRouter();
-
-    useEffect(() => {
-        router.push("/deltaker");
-
-    }, []);
 
 
     return (
@@ -43,7 +34,7 @@ export default function DeltakerSchema() {
             script.async = 1;
             script.crossOrigin = 1;
             headTag.appendChild(script);
-
+            w.reload()
    })(window, document);
           `,
                 }}
