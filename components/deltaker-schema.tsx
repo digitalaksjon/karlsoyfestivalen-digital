@@ -15,10 +15,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
+
 
 export default function DeltakerSchema() {
 
+    const router = useRouter();
+    // Call this function whenever you want to
+    // refresh props!
+    const refreshData = () => {
+        router.replace(router.asPath);
+    }
 
+    useEffect => {
+        refreshData();
+    }
 
     return (
         <div className="container">
