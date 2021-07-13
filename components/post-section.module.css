@@ -185,3 +185,7 @@
   color: #F0604C;
 }
 
+.bio button a { 
+  font-size: 1.5em;
+  padding: 20px;
+}

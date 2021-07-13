@@ -14,6 +14,7 @@ import author from './author'
 
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
+import mainButton from './objects/mainButton'
 import authorReference from './objects/authorReference'
 import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
@@ -37,6 +38,7 @@ export default createSchema({
 
     excerptPortableText,
     mainImage,
+    mainButton,
     authorReference,
     bodyPortableText,
     bioPortableText

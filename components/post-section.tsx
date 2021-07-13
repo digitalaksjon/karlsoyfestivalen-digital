@@ -58,6 +58,12 @@ const serializers = {
         </div>
       </div>)
 
+    },
+
+    mainButton(props) {
+      return (<p>
+        <button  className="deltakerbutton"><a href={props.node.link} >{props.node.title}</a></button>
+      </p>)
     }
   }
 }
