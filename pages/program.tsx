@@ -21,35 +21,52 @@ import SpeakersGrid from '@components/speakers-grid';
 import Layout from '@components/layout';
 import Header from '@components/header';
 
-import { getAllSpeakers } from '@lib/cms-api';
+import { getAllMusikk, getAllKunst, getAllFramtid, getAllFellesskap } from '@lib/cms-api';
 import { Speaker } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
-  speakers: Speaker[];
+  musikk: Speaker[];
+  kunst: Speaker[];
+  framtid: Speaker[];
+  fellesskap: Speaker[];
 };
 
-export default function Speakers({ speakers }: Props) {
+export default function Speakers({ musikk, kunst, framtid, fellesskap }: Props) {
   const meta = {
     title: 'Artister, kunstnere og andre bidragsytere',
     description: "Her finner du informasjon om det som skjer på årets festival"
   };
+  
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Artister" description={meta.description} />
-        <SpeakersGrid speakers={speakers} />
+        <Header hero="Program" description={meta.description} />
+        <SpeakersGrid speakers={musikk} />
+        <Header hero="Kunst" description="" />
+        {kunst && <SpeakersGrid speakers={kunst} />}
+        <Header hero="Framtid" description="" />
+        {framtid && <SpeakersGrid speakers={framtid} />}
+        <Header hero="Fellesskap" description="" />
+        {fellesskap && <SpeakersGrid speakers={fellesskap} />}
       </Layout>
     </Page>
   );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const speakers = await getAllSpeakers();
+  
+  const musikk = await getAllMusikk();
+  const kunst = await getAllKunst();
+  const framtid = await getAllFramtid();
+  const fellesskap = await getAllFellesskap();
 
   return {
     props: {
-      speakers
+      musikk,
+      kunst,
+      framtid,
+      fellesskap
     },
     revalidate: 60
   };

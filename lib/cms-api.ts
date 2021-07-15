@@ -26,7 +26,11 @@ import {
   getAllSponsorsQuery,
   getAllStagesQuery,
   getAllPostsQuery,
-  getAllSpeakersQuery
+  getAllMusikkQuery,
+  getAllKunstQuery,
+  getAllSpeakersQuery,
+  getAllFramtidQuery,
+  getAllFellesskapQuery
 } from './queries'
 
 const config = {
@@ -61,9 +65,29 @@ export const urlFor = (source: String | Object) => createImageUrlBuilder(config)
 
 export const usePreviewSubscription = createPreviewSubscriptionHook(config)
 
-
 export async function getAllSpeakers(preview?: Boolean) {
   const data = await getClient(preview).fetch(getAllSpeakersQuery)
+  return data
+}
+
+
+export async function getAllMusikk(preview?: Boolean) {
+  const data = await getClient(preview).fetch(getAllMusikkQuery)
+  return data
+}
+
+export async function getAllKunst(preview?: Boolean) {
+  const data = await getClient(preview).fetch(getAllKunstQuery)
+  return data
+}
+
+export async function getAllFramtid(preview?: Boolean) {
+  const data = await getClient(preview).fetch(getAllFramtidQuery)
+  return data
+}
+
+export async function getAllFellesskap(preview?: Boolean) {
+  const data = await getClient(preview).fetch(getAllFellesskapQuery)
   return data
 }
 

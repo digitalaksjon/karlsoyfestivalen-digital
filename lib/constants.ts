@@ -34,14 +34,15 @@ export const NAVIGATION = [
     name: 'Nyheter',
     route: '/nyheter'
   },
-  /*  {
-      name: 'Program',
-      route: '/program'
-    },*/
   {
-    name: 'Artister',
-    route: '/artist'
+    name: 'Program',
+    route: '/program'
   },
+  {
+    name: 'Sendeplan',
+    route: '/sendeplan'
+  },
+
   {
     name: 'Deltaker',
     route: '/nyheter/karlsoyfestivalen-en-annerledes-opplevelse'

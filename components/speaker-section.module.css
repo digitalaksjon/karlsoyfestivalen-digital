@@ -99,6 +99,10 @@
     
   }
 
+  .title {
+    width: 60%;
+  }
+
   .imageContainer {
     position: relative;
     max-height: 500px;
@@ -126,14 +130,20 @@
     max-width: 00px;
     max-height: 400px;
   }
+  .name {
+    font-weight: 800;
+    color: #fff;
+    font-size: 56px;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
 }
 
 .name {
-  font-weight: 800;
-  color: #fff;
-  font-size: 56px;
-  margin: 0;
-  line-height: 1.2;
+
+  font-size: 36px;
+
 }
 
 .company {

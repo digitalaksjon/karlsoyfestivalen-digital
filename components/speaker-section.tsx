@@ -42,7 +42,7 @@ export default function SpeakerSection({ speaker }: Props) {
   }
   return (
     <>
-      <Link href="/artist">
+      <Link href="/program">
         <a className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export default function SpeakerSection({ speaker }: Props) {
           >
             <path d="M15 18l-6-6 6-6" />
           </svg>
-          Tilbake til artister
+          Tilbake til programmet
         </a>
       </Link>
       <div key={speaker.name} className={styles.container}>
@@ -78,7 +78,7 @@ export default function SpeakerSection({ speaker }: Props) {
           <div>
             <h1 className={styles.name}>{speaker.name}</h1>
             <p className={styles.title}>
-              {`${speaker.title} `}
+              {`${speaker.title} `} 
               <span className={styles.company}>{speaker.company}</span>
             </p>
             <h2 className={styles['bio-header']}>Bio</h2>

@@ -1,7 +1,7 @@
 export default {
   name: 'speaker',
   type: 'document',
-  title: 'Speaker',
+  title: 'Bidragsyter',
   preview: {
     select: {
       title: 'name',
@@ -37,32 +37,38 @@ export default {
       }
     },
     {
+      title: 'Type bidragsyter',
+      name: 'artisttype',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'Musikk', value: 'musikk'},
+          {title: 'Kunst', value: 'kunst'},
+          {title: 'Felleskap', value: 'fellesskap'},
+          {title: 'Framtid', value: 'framtid'}
+        ]
+      }
+    },
+    {
       name: 'title',
       type: 'string',
-      title: 'Professional title'
+      title: 'Kort slagord'
     },
     {
       name: 'twitter',
       type: 'string',
-      title: 'Twitter'
+      title: 'Instagram'
     },
     {
       name: 'github',
       type: 'string',
-      title: 'Github'
-    },
-    {
-      name: 'company',
-      type: 'reference',
-      title: 'Company',
-      to: [{
-        type: 'company'
-      }]
+      title: 'Facebook'
     },
     {
       name: 'image',
       type: 'image',
-      title: 'Image',
+      title: 'Bilde',
       options: {
         hotspot: true
       }
