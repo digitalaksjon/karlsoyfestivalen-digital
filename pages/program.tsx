@@ -35,13 +35,13 @@ type Props = {
 export default function Speakers({ musikk, kunst, framtid, fellesskap }: Props) {
   const meta = {
     title: 'Artister, kunstnere og andre bidragsytere',
-    description: "Her finner du informasjon om det som skjer på årets festival"
+    description: "Årets musikalske program"
   };
   
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Program" description={meta.description} />
+        <Header hero="Musikk" description={meta.description} />
         <SpeakersGrid speakers={musikk} />
         <Header hero="Kunst" description="Bidragsytere på årets kunstprogram" />
         {kunst && <SpeakersGrid speakers={kunst} />}
