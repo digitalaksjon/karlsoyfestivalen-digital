@@ -43,11 +43,11 @@ export default function Speakers({ musikk, kunst, framtid, fellesskap }: Props) 
       <Layout>
         <Header hero="Program" description={meta.description} />
         <SpeakersGrid speakers={musikk} />
-        <Header hero="Kunst" description="" />
+        <Header hero="Kunst" description="Bidragsytere på årets kunstprogram" />
         {kunst && <SpeakersGrid speakers={kunst} />}
-        <Header hero="Framtid" description="" />
+        <Header hero="Framtid" description="Bidragsytere og prosjekter på barneprogrammet" />
         {framtid && <SpeakersGrid speakers={framtid} />}
-        <Header hero="Fellesskap" description="" />
+        <Header hero="Fellesskap" description="Årets seminarprogram" />
         {fellesskap && <SpeakersGrid speakers={fellesskap} />}
       </Layout>
     </Page>
@@ -55,7 +55,7 @@ export default function Speakers({ musikk, kunst, framtid, fellesskap }: Props) 
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  
+
   const musikk = await getAllMusikk();
   const kunst = await getAllKunst();
   const framtid = await getAllFramtid();
