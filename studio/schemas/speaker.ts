@@ -37,6 +37,12 @@ export default {
       }
     },
     {
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
+    },
+    {
       title: 'Type bidragsyter',
       name: 'artisttype',
       type: 'array',

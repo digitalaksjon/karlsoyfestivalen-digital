@@ -1,5 +1,4 @@
 import {
-  catchError,
   filter,
   finalize,
   map,
@@ -9,16 +8,7 @@ import {
   take,
 } from 'rxjs/operators'
 
-import {
-  defer,
-  EMPTY,
-  fromEvent,
-  merge,
-  MonoTypeOperatorFunction,
-  Observable,
-  of,
-  partition,
-} from 'rxjs'
+import {defer, EMPTY, fromEvent, merge, Observable, of, partition} from 'rxjs'
 
 import {customAlphabet} from 'nanoid'
 import {
@@ -32,7 +22,7 @@ import {SUBSCRIBE_METHODS} from './methods'
 
 // at 1000 IDs per second ~4 million years needed in order to have a 1% probability of at least one collision.
 // => https://zelark.github.io/nano-id-cc/
-const getNextRequestId = customAlphabet(
+const defaultGetNextRequestId = customAlphabet(
   '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-',
   20,
 )
@@ -43,7 +33,7 @@ function formatRequest(method: string, params: RequestParams, id: string) {
   return JSON.stringify({
     jsonrpc: '2.0',
     method,
-    params,
+    params: addApiVersion(params, 'v1'),
     id,
   })
 }
@@ -60,15 +50,9 @@ function addApiVersion(params: RequestParams, v: string) {
   return {...params, apiVersion: v}
 }
 
-const finalizeWith = <T>(
-  finalizer$: Observable<any>,
-): MonoTypeOperatorFunction<T> => input$ =>
-  input$.pipe(
-    finalize(() => finalizer$.pipe(catchError(() => EMPTY)).subscribe()),
-  )
-
 export const createClient = (
   connection$: Observable<WebSocket>,
+  getNextRequestId = defaultGetNextRequestId,
 ): BifurClient => {
   const [heartbeats$, responses$] = partition(
     connection$.pipe(
@@ -93,30 +77,30 @@ export const createClient = (
     share(),
   )
 
-  function call<T>(method: string, params: RequestParams = {}): Observable<T> {
+  function call<T>(
+    ws: WebSocket,
+    method: string,
+    params: RequestParams = {},
+  ): Observable<T> {
     const requestId = getNextRequestId()
-    return connection$.pipe(
-      take(1),
-      mergeMap(ws => {
-        return merge(
-          parsedResponses$.pipe(
-            filter(rpcResult => rpcResult.id === requestId),
-            map(rpcResult => rpcResult.result),
-          ),
-          defer(() => {
-            ws.send(
-              formatRequest(method, addApiVersion(params, 'v1'), requestId),
-            )
-            return EMPTY
-          }),
-        )
+    return merge(
+      parsedResponses$.pipe(
+        filter(rpcResult => rpcResult.id === requestId),
+        map((rpcResult): T => rpcResult.result),
+      ),
+      defer(() => {
+        ws.send(formatRequest(method, params, requestId))
+        return EMPTY
       }),
     )
   }
 
   // Will call the rpc method and return an observable that emits the first reply and then ends
   function requestMethod<T>(method: RequestMethod, params?: RequestParams) {
-    return call<T>(method, params).pipe(take(1))
+    return connection$.pipe(
+      take(1),
+      mergeMap(ws => call<T>(ws, method, params).pipe(take(1))),
+    )
   }
 
   // Will call the rpc method with the '_subscribe' suffix and return an observable of all received messages and
@@ -125,18 +109,34 @@ export const createClient = (
     method: SubscribeMethods,
     params?: RequestParams,
   ) {
-    return call<string>(`${method}_subscribe`, params).pipe(
+    return connection$.pipe(
       take(1),
-      mergeMap(subscriptionId =>
-        parsedResponses$.pipe(
-          filter(
-            message =>
-              message.method === `${method}_subscription` &&
-              message.params.subscription === subscriptionId,
-          ),
-          map(message => message.params.result),
-          finalizeWith(
-            call<string>(`${method}_unsubscribe`, {subscriptionId}),
+      mergeMap(ws =>
+        call<string>(ws, `${method}_subscribe`, params).pipe(
+          take(1),
+          mergeMap(subscriptionId =>
+            parsedResponses$.pipe(
+              filter(
+                message =>
+                  message.method === `${method}_subscription` &&
+                  message.params.subscription === subscriptionId,
+              ),
+              map(message => message.params.result),
+              finalize(() => {
+                if (
+                  ws.readyState !== ws.CLOSED &&
+                  ws.readyState !== ws.CLOSING
+                ) {
+                  ws.send(
+                    formatRequest(
+                      `${method}_unsubscribe`,
+                      {subscriptionId},
+                      getNextRequestId(),
+                    ),
+                  )
+                }
+              }),
+            ),
           ),
         ),
       ),

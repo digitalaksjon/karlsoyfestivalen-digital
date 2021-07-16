@@ -1,6 +1,6 @@
 Prism.languages.haskell = {
 	'comment': {
-		pattern: /(^|[^-!#$%*+=?&@|~.:<>^\\\/])(?:--(?:(?=.)[^-!#$%*+=?&@|~.:<>^\\\/].*|$)|{-[\s\S]*?-})/m,
+		pattern: /(^|[^-!#$%*+=?&@|~.:<>^\\\/])(?:--(?:(?=.)[^-!#$%*+=?&@|~.:<>^\\\/].*|$)|\{-[\s\S]*?-\})/m,
 		lookbehind: true
 	},
 	'char': {
@@ -16,7 +16,7 @@ Prism.languages.haskell = {
 		// The imported or hidden names are not included in this import
 		// statement. This is because we want to highlight those exactly like
 		// we do for the names in the program.
-		pattern: /(^\s*)import\s+(?:qualified\s+)?(?:[A-Z][\w']*)(?:\.[A-Z][\w']*)*(?:\s+as\s+(?:[A-Z][\w']*)(?:\.[A-Z][\w']*)*)?(?:\s+hiding\b)?/m,
+		pattern: /(^[\t ]*)import\s+(?:qualified\s+)?(?:[A-Z][\w']*)(?:\.[A-Z][\w']*)*(?:\s+as\s+(?:[A-Z][\w']*)(?:\.[A-Z][\w']*)*)?(?:\s+hiding\b)?/m,
 		lookbehind: true,
 		inside: {
 			'keyword': /\b(?:import|qualified|as|hiding)\b/
@@ -31,7 +31,7 @@ Prism.languages.haskell = {
 	// It may also be a separator between a module name and an identifier => no
 	// operator. If it comes together with other special characters it is an
 	// operator too.
-	'operator': /\s\.\s|[-!#$%*+=?&@|~.:<>^\\\/]*\.[-!#$%*+=?&@|~.:<>^\\\/]+|[-!#$%*+=?&@|~.:<>^\\\/]+\.[-!#$%*+=?&@|~.:<>^\\\/]*|[-!#$%*+=?&@|~:<>^\\\/]+|`(?:[A-Z][\w']*\.)*[_a-z][\w']*`/,
+	'operator': /\s\.\s|[-!#$%*+=?&@|~:<>^\\\/]*\.[-!#$%*+=?&@|~.:<>^\\\/]+|[-!#$%*+=?&@|~.:<>^\\\/]+\.[-!#$%*+=?&@|~:<>^\\\/]*|[-!#$%*+=?&@|~:<>^\\\/]+|`(?:[A-Z][\w']*\.)*[_a-z][\w']*`/,
 	// In Haskell, nearly everything is a variable, do not highlight these.
 	'hvariable': /\b(?:[A-Z][\w']*\.)*[_a-z][\w']*\b/,
 	'constant': /\b(?:[A-Z][\w']*\.)*[A-Z][\w']*\b/,

@@ -1,5 +1,4 @@
-import {SanityClient} from '@sanity/client'
-import {BifurClient} from './types'
+import {BifurClient, SanityClientLike} from './types'
 import {createClient} from './createClient'
 import {createConnect} from './createConnect'
 import {timeoutFirstWith} from './operators'
@@ -38,7 +37,7 @@ export function fromUrl(url: string, options: Options = {}): BifurClient {
   )
 }
 
-export function fromSanityClient(client: SanityClient): BifurClient {
+export function fromSanityClient(client: SanityClientLike): BifurClient {
   const {dataset} = client.config()
   return fromUrl(client.getUrl(`/socket/${dataset}`).replace(/^http/, 'ws'))
 }

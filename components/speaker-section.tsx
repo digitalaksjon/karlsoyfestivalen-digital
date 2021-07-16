@@ -84,7 +84,7 @@ export default function SpeakerSection({ speaker }: Props) {
             <h2 className={styles['bio-header']}>Bio</h2>
             <p className={styles.bio}> {speaker.bio && <BlockContent blocks={speaker.bio} serializers={serializers} />}</p>
             <h3 className={styles['socials-header']}>{speaker.name} i sosiale medier</h3>
-            {speaker.twitter ? (
+            {speaker.twitter && speaker.twitter ? (
               <a
                 aria-label="Instagram"
                 href={speaker.twitter}
@@ -98,7 +98,7 @@ export default function SpeakerSection({ speaker }: Props) {
                 <Instagram size={24} />
               </span>
             )}
-            {speaker.github ? (
+            {speaker.github && speaker.github ? (
               <a
                 aria-label="Facebook"
                 className={styles.githubIcon}

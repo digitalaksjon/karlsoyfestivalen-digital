@@ -16,7 +16,7 @@ export const getAllSpeakersQuery = groq`*[_type == "speaker" ]{
   image
 }`
 
-export const getAllMusikkQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'musikk' || artisttype[1] == 'musikk')]{
+export const getAllMusikkQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'musikk' || artisttype[1] == 'musikk')] | order(order asc) {
   
         name,
         bio,
@@ -30,7 +30,7 @@ export const getAllMusikkQuery = groq`*[_type == "speaker" &&  (artisttype[0] ==
           description
         },
         image
-      }`
+      }` 
 
       export const getAllKunstQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'kunst' || artisttype[1] == 'kunst')]{
   
