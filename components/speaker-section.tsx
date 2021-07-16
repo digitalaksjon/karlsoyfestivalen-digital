@@ -95,7 +95,7 @@ export default function SpeakerSection({ speaker }: Props) {
               </a>
             ) : (
               <span className={styles.disabled}>
-                <Instagram size={24} />
+         
               </span>
             )}
             {speaker.github && speaker.github ? (
@@ -110,7 +110,7 @@ export default function SpeakerSection({ speaker }: Props) {
               </a>
             ) : (
               <span className={cn(styles.githubIcon, styles.disabled)}>
-                <Facebook width={22} />
+         
               </span>
             )}
           </div>

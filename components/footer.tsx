@@ -6,9 +6,9 @@ import { COPYRIGHT_HOLDER, SITE_NAME, CODE_OF_CONDUCT, LEGAL_URL, REPO } from '@
 export function HostedByVercel() {
   return (
     <a
-      href="https://karlsoyfestivalen.no"
+      href="/"
       className={cn(styles['footer-link'], styles['footer-logo'])}
-      target="_blank"
+
       rel="noopener noreferrer"
     >
       <div className={styles['secondary-text']}>Created by </div>
