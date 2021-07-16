@@ -32,7 +32,7 @@ export const getAllMusikkQuery = groq`*[_type == "speaker" &&  (artisttype[0] ==
         image
       }` 
 
-      export const getAllKunstQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'kunst' || artisttype[1] == 'kunst')]{
+      export const getAllKunstQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'kunst' || artisttype[1] == 'kunst')] | order(order asc) {
   
         name,
         bio,
@@ -48,7 +48,7 @@ export const getAllMusikkQuery = groq`*[_type == "speaker" &&  (artisttype[0] ==
         image
       }`
 
-      export const getAllFramtidQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'framtid' || artisttype[1] == 'framtid')]{
+      export const getAllFramtidQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'framtid' || artisttype[1] == 'framtid')] | order(order asc){
   
         name,
         bio,
@@ -65,7 +65,7 @@ export const getAllMusikkQuery = groq`*[_type == "speaker" &&  (artisttype[0] ==
       }`
 
      
-      export const getAllFellesskapQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'fellesskap' || artisttype[1] == 'fellesskap')]{
+      export const getAllFellesskapQuery = groq`*[_type == "speaker" &&  (artisttype[0] == 'fellesskap' || artisttype[1] == 'fellesskap')] | order(order asc){
   
         name,
         bio,
