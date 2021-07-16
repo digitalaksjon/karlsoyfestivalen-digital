@@ -22,6 +22,7 @@ import { parseISO, format, isBefore, isAfter } from 'date-fns';
 import { Talk } from '@lib/types';
 import styles from './talk-card.module.css';
 import { urlFor } from '@lib/cms-api';
+import { nb } from 'date-fns/locale'
 
 type Props = {
   key: string;
@@ -31,7 +32,8 @@ type Props = {
 
 const formatDate = (date: string) => {
   // https://github.com/date-fns/date-fns/issues/946
-  return format(parseISO(date), "h:mmaaaaa'm'");
+  return format(parseISO(date), "HH:mm",{locale:nb});
+
 };
 
 export default function TalkCard({ talk: { title, speakers = [], start, end }, showTime }: Props) {
