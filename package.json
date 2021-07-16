@@ -68,6 +68,7 @@
     "file-loader": "^6.2.0",
     "instagram-web-api": "^2.2.2",
     "lerna": "^3.22.1",
+    "postcss": "^8.3.5",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-hover-media-feature": "1.0.0",
     "postcss-preset-env": "6.7.0",
