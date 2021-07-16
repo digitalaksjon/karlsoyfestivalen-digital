@@ -47,7 +47,7 @@ export default function Speakers({ musikk, kunst, framtid, fellesskap }: Props) 
         {kunst && <SpeakersGrid speakers={kunst} />}
         <Header hero="Framtid" description="Bidragsytere og prosjekter på barneprogrammet" />
         {framtid && <SpeakersGrid speakers={framtid} />}
-        <Header hero="Fellesskap" description="Årets seminarprogram" />
+        <Header hero="Positive motkrefter" description="Årets seminarprogram" />
         {fellesskap && <SpeakersGrid speakers={fellesskap} />}
       </Layout>
     </Page>
