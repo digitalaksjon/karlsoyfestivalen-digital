@@ -48,7 +48,7 @@ export default function Hero() {
         {SITE_DESCRIPTION}
       </h2>
       <div className={cn(styleUtils.appear, styleUtils['appear-forth'], styles.metawrapper)}>
-        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://player.vimeo.com/video/562882348?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://player.vimeo.com/video/576294789?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
         <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.manifest)}>
           <div className={cn(styles.inner_manifest)}>
             <h2>KARLSØYFESTIVALENS MANIFEST</h2>

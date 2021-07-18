@@ -14,7 +14,8 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "order-documents"
+    "order-documents",
+    "media"
   ],
   "env": {
     "development": {
