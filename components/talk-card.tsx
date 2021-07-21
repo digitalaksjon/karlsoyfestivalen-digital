@@ -36,7 +36,7 @@ const formatDate = (date: string) => {
 
 };
 
-export default function TalkCard({ talk: { title, speakers = [], start, end }, showTime }: Props) {
+export default function TalkCard({ talk: { title, description, speakers = [], start, end }, showTime }: Props) {
   const [isTalkLive, setIsTalkLive] = useState(false);
   const [startAndEndTime, setStartAndEndTime] = useState('');
 
@@ -61,6 +61,7 @@ export default function TalkCard({ talk: { title, speakers = [], start, end }, s
             <h4 title={title} className={styles.title}>
               {title}
             </h4>
+            <div className={styles.description}>{description}</div>
             <div className={styles.speaker}>
               <div className={styles['avatar-group']}>
                 {speakers.map(s => (
@@ -78,7 +79,7 @@ export default function TalkCard({ talk: { title, speakers = [], start, end }, s
                 ))}
               </div>
               <h5 className={styles.name}>
-                {speakers.length === 1 ? speakers[0].name : `${speakers.length} speakers`}
+                {speakers.length === 1 ? speakers[0].name : ``}
               </h5>
             </div>
           </div>

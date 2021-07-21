@@ -1,6 +1,6 @@
 export default {
   name: 'company',
-  title: 'Company',
+  title: 'Fellesskap',
   type: 'document',
   fields: [
     {

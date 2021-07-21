@@ -100,6 +100,7 @@ export const getAllStagesQuery = groq`*[_type == "stage"]{
           title,
           start,
           end,
+          description,
           speakers[]->{
             name,
             "slug": slug.current,

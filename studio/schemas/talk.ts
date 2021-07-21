@@ -1,7 +1,7 @@
 export default {
   name: 'talk',
   type: 'document',
-  title: 'Talk',
+  title: 'Innslag',
   fields: [
     {
       name: 'title',

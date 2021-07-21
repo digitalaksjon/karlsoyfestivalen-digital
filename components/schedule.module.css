@@ -65,6 +65,8 @@
   .container {
     border-top: 1px solid var(--accents-7);
     margin-top: var(--space-4x);
+    display: flex;
+    flex-direction: column;
   }
 
   .row {

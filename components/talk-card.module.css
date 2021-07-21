@@ -90,3 +90,9 @@
 .link:hover .card:not(.is-live) {
   background-image: linear-gradient(#111111, #111111), linear-gradient(to right, #555, #555);
 }
+
+.description {
+  font-size: 0.8em;
+  padding: 10px 0;
+  color: #ccc;
+}

@@ -3,7 +3,7 @@ import client from 'part:@sanity/base/client'
 export default {
   name: 'stage',
   type: 'document',
-  title: 'Stage',
+  title: 'Scene',
   fields: [
     {
       name: 'name',

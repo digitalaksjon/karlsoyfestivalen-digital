@@ -42,7 +42,6 @@ export const NAVIGATION = [
     name: 'Sendeplan',
     route: '/sendeplan'
   },
-
   {
     name: 'Deltaker',
     route: '/nyheter/karlsoyfestivalen-en-annerledes-opplevelse'

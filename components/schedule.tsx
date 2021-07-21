@@ -19,12 +19,15 @@ import { Stage, Talk } from '@lib/types';
 import styles from './schedule.module.css';
 import TalkCard from './talk-card';
 
-function StageRow({ stage }: { stage: Stage }) {
+
+function StageRow({ stage, day }: { stage: Stage, day: String }) {
   // Group talks by the time block
   const timeBlocks = stage.schedule.reduce((allBlocks: any, talk) => {
     allBlocks[talk.start] = [...(allBlocks[talk.start] || []), talk];
     return allBlocks;
   }, {});
+
+  
 
   return (
     <div key={stage.name} className={styles.row}>
@@ -32,13 +35,23 @@ function StageRow({ stage }: { stage: Stage }) {
         <span>{stage.name}</span>
       </h3>
       <div className={cn(styles.talks, styles[stage.slug])}>
-        {Object.keys(timeBlocks).map((startTime: string) => (
-          <div key={startTime}>
-            {timeBlocks[startTime].map((talk: Talk, index: number) => (
-              <TalkCard key={talk.title} talk={talk} showTime={index === 0} />
-            ))}
-          </div>
-        ))}
+        {Object.keys(timeBlocks).map((startTime: string) => {
+
+            let todaysDate = new Date(startTime).getDate().toString();
+
+            if (todaysDate == day) {
+              return (
+                <div key={startTime}>
+                {timeBlocks[startTime].map((talk: Talk, index: number) =>  
+                  (<TalkCard key={talk.title} talk={talk} showTime={index === 0} />)                  
+                )}
+              </div>
+              )
+            }
+            })
+        }
+                            
+
       </div>
     </div>
   );
@@ -48,13 +61,72 @@ type Props = {
   allStages: Stage[];
 };
 
+import Header from '@components/header';
+
 export default function Schedule({ allStages }: Props) {
   return (
     <div className={styles.container}>
+      <Header hero="Tirsdag 3. august" description="" />
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' && stage.name != 'Galleriet' ) 
+          return      ( <StageRow key={stage.slug} stage={stage} day="3" />)       
+        }
+          
+        )}
+      </div>
+
+      <Header hero="Onsdag 4. august" description="" />
+
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' && stage.name != 'Galleriet' ) 
+          return      ( <StageRow key={stage.slug} stage={stage} day="4" />)       
+        }
+          
+        )}
+      </div>
+
+      <Header hero="Torsdag 5. august" description="" />
+
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' ) 
+          return      ( <StageRow key={stage.slug} stage={stage} day="5" />)       
+        }
+          
+        )}
+      </div>
+ 
+      <Header hero="Fredag 6. august" description="" />
+
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => (
-          <StageRow key={stage.slug} stage={stage} />
+          <StageRow key={stage.slug} stage={stage} day="6" />
         ))}
+      </div>
+
+      <Header hero="Lørdag 7. august" description="" />
+
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => (
+          <StageRow key={stage.slug} stage={stage} day="7" />
+        ))}
+      </div>
+
+      <Header hero="Søndag 8. august" description="" />
+
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' && stage.name != 'Galleriet' ) 
+          return      ( <StageRow key={stage.slug} stage={stage} day="8" />)       
+        }
+          
+        )}
       </div>
     </div>
   );
