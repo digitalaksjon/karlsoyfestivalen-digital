@@ -16,7 +16,7 @@
 
 import cn from 'classnames';
 import Tilt from 'vanilla-tilt';
-import { createRef, useRef, useEffect, useState } from 'react';
+import { createRef, useRef, useEffect, useState, useLayoutEffect } from 'react';
 import { UserData } from '@lib/hooks/use-conf-data';
 import { TicketGenerationState } from '@lib/constants';
 import isMobileOrTablet from '@lib/is-mobile-or-tablet';
@@ -36,17 +36,18 @@ type Props = {
   ticketNumber: UserData['ticketNumber'];
   name: UserData['name'];
   sharePage?: boolean;
+  innerRef?: HTMLDivElement;
 };
  
 
-export default function Ticket({ username, name, ticketNumber, sharePage }: Props) {
+export default function Ticket({ username, name, ticketNumber, sharePage, innerRef }: Props) {
   const ticketRef = useRef<HTMLDivElement>(null);
   const [ticketGenerationState, setTicketGenerationState] = useState<TicketGenerationState>(
     'default'
   );
   const divRef = useRef<HTMLDivElement>(null);
 
-  const ref = createRef(null);
+  const ref = createRef<HTMLDivElement>();
   const [width, setWidth] = useState(600);
   const [height, setHeight] = useState(300);
   const [image, takeScreenShot] = useScreenshot();
@@ -126,15 +127,15 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
        
       </div>
         <div
-          ref={ticketRef}
+       
           className={cn(styles['ticket-visual'], styleUtils.appear, styleUtils['appear-fourth'])}
         >
-        <div className={styles.ticketWrapper} ref={ref}><TicketVisual
+        <div className={styles.ticketWrapper} ><TicketVisual
             username={username}
             name={name}
             ticketNumber={ticketNumber}
             ticketGenerationState={ticketGenerationState}
-            ref={ticketRef}
+            //ref={ticketRef}
           /></div>
           
         </div>

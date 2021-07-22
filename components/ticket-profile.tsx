@@ -44,7 +44,6 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
         ) : (
           <span className={cn(styles.image, styles['empty-icon'])}>
 
-             <CardProfile />
 
           </span>
         )}
