@@ -62,11 +62,17 @@ export default function TicketVisual({
         {ticketNumber && (
           <div className={styles['ticket-number-wrapper']}>
             <div className={styles['ticket-number']}>
-              <TicketNumber number={ticketNumber} />
+              <TicketNumber number={getRandomIntInclusive(0, 99999)} />
             </div>
           </div>
         )}
       </div>
     </>
   );
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }

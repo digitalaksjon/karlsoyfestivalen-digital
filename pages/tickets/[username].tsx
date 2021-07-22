@@ -54,7 +54,7 @@ export default function TicketShare({ username, ticketNumber, posts, name, usern
         url: `${SITE_URL}/tickets/${username}`
       }
     : {
-        title: 'Ticket Demo - Virtual Event Starter Kit',
+        title: 'Digitalt Festivalpass - Karlsøyfestivalen 2021',
         description: META_DESCRIPTION,
         image: `/api/ticket-images/${usernameFromParams}`,
         url: `${SITE_URL}/tickets/${usernameFromParams}`
@@ -74,6 +74,7 @@ export default function TicketShare({ username, ticketNumber, posts, name, usern
         }}
         posts={posts}
         sharePage
+
         
       />
     </Page>

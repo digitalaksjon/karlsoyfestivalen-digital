@@ -16,7 +16,7 @@
 
 import cn from 'classnames';
 import Tilt from 'vanilla-tilt';
-import { useRef, useEffect, useState } from 'react';
+import { createRef, useRef, useEffect, useState } from 'react';
 import { UserData } from '@lib/hooks/use-conf-data';
 import { TicketGenerationState } from '@lib/constants';
 import isMobileOrTablet from '@lib/is-mobile-or-tablet';
@@ -29,6 +29,7 @@ import TicketActions from './ticket-actions';
 import TicketCopy from './ticket-copy';
 import { DATE, SITE_NAME } from '@lib/constants';
 import Form from './form';
+import { useScreenshot } from "use-react-screenshot";
 
 type Props = {
   username: UserData['username'];
@@ -36,6 +37,7 @@ type Props = {
   name: UserData['name'];
   sharePage?: boolean;
 };
+ 
 
 export default function Ticket({ username, name, ticketNumber, sharePage }: Props) {
   const ticketRef = useRef<HTMLDivElement>(null);
@@ -44,7 +46,17 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
   );
   const divRef = useRef<HTMLDivElement>(null);
 
+  const ref = createRef(null);
+  const [width, setWidth] = useState(600);
+  const [height, setHeight] = useState(300);
+  const [image, takeScreenShot] = useScreenshot();
+
+  const getImage = () => takeScreenShot(ref.current);
+
+
   useEffect(() => {
+
+
     if (ticketRef.current && !window.matchMedia('(pointer: coarse)').matches) {
       Tilt.init(ticketRef.current, {
         glare: true,
@@ -65,7 +77,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
     <div
       className={cn(styles['ticket-layout'], {
         [styles['ticket-share-layout']]: sharePage
-      })}
+      })} 
     >
       <div ref={divRef}>
         <div className={styles['ticket-text']}>
@@ -85,7 +97,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
           <p className={cn(styles.description, styleUtils.appear, styleUtils['appear-second'])}>
             {sharePage ? (
               <>
-                Join {name && 'them '} on {DATE}.
+                Gratulerer med kjøp av festivalpass! Bli med på www.karlsoyfestivalen.no fra {name && 'them '}{DATE}.
               </>
             ) : (
               <>
@@ -107,17 +119,27 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
         </div>
       </div>
       <div className={styles['ticket-visual-wrapper']}>
+      <div>
+        <button style={{ marginBottom: "10px" }} onClick={getImage}>
+          Take screenshot
+        </button>
+       
+      </div>
         <div
           ref={ticketRef}
           className={cn(styles['ticket-visual'], styleUtils.appear, styleUtils['appear-fourth'])}
         >
-          <TicketVisual
+        <div className={styles.ticketWrapper} ref={ref}><TicketVisual
             username={username}
             name={name}
             ticketNumber={ticketNumber}
             ticketGenerationState={ticketGenerationState}
-          />
+            ref={ticketRef}
+          /></div>
+          
         </div>
+              <img width={width} height={height} src={image} alt={"ScreenShot"} />
+
         {!sharePage && (
           <>
             {username ? (

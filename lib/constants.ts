@@ -2,7 +2,7 @@ export const SITE_URL = 'https:/karlsoyfestivalen-digital.vercel.app';
 export const SITE_ORIGIN = process.env.SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'karlsoyfestivalen';
 export const BRAND_NAME = 'Karlsøyfestivalen 2021';
-export const SITE_NAME_MULTILINE = ['Karlsøyfestivalen', 'Conf'];
+export const SITE_NAME_MULTILINE = ['Karlsøyfestivalen', 'Digital'];
 export const SITE_NAME = 'Karlsøyfestivalen Digital';
 export const META_DESCRIPTION =
   'Karlsøyfestivalen er en global digital festival med mening!';

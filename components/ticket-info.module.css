@@ -40,11 +40,17 @@
   font-size: calc(20px * var(--size));
   line-height: 1.15;
   margin-bottom: var(--space-4x);
+
+  width: 100%;
+  text-align: center;
+  margin-top:10px;
+
 }
 
 @media (min-width: 768px) {
   .date {
     margin-bottom: 0;
+    text-align: right;
   }
 }
 

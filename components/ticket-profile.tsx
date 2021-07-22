@@ -18,7 +18,11 @@ import { TicketGenerationState } from '@lib/constants';
 import GithubIcon from '@components/icons/icon-github';
 import cn from 'classnames';
 import IconAvatar from './icons/icon-avatar';
+import { EditText } from 'react-edit-text';
+import 'react-edit-text/dist/index.css';
+import CardProfile from '@components/CardProfile'
 import styles from './ticket-profile.module.css';
+
 
 type Props = {
   name?: string;
@@ -39,7 +43,9 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
           <img src={`https://github.com/${username}.png`} alt={username} className={styles.image} />
         ) : (
           <span className={cn(styles.image, styles['empty-icon'])}>
-            <IconAvatar />
+
+             <CardProfile />
+
           </span>
         )}
       </span>
@@ -54,7 +60,9 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
               [styles.show]: ticketGenerationState === 'loading'
             })}
           >
-            {name || username || 'Your Name'}
+     
+                    <EditText id="name" placeholder="Kari Nordmann" style={{backgroundColor: '#433B35', color: '#FDFBF9', fontSize: '24px', fontWeight: 'bold', margin: '0', whiteSpace: 'pre-wrap', width: '100%', overflow: 'hidden'}} />
+
           </span>
         </p>
         <p className={styles.username}>
@@ -63,13 +71,13 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
               [styles.show]: ticketGenerationState === 'loading'
             })}
           >
-            <span className={styles.githubIcon}>
-              <GithubIcon size={20 * size} />
-            </span>
-            {username || <>username</>}
+            @karlsoyfestivalen
+            
           </span>
         </p>
       </div>
     </div>
   );
 }
+
+

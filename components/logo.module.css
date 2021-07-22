@@ -17,21 +17,37 @@
 .logo {
   display: flex;
   align-items: center;
+
 }
+
 
 .icon {
   margin-right: var(--space-3x);
   display: flex;
-  width: 3em;
+  width: 100px;
 }
 
 .text {
   line-height: 1.15;
-  font-size: 1.25em;
+  font-size: 1.1em;
   text-transform: uppercase;
   font-weight: bold;
-}
 
+
+}
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .text {
+    text-align: center;
+  }
+}
 .text-secondary {
   color: var(--color);
+
 }
+
+

@@ -27,8 +27,8 @@ export default function IconLogo({
       <Image
       src="/vectorlogo.svg"
       alt="Karlsøyfestivalen"
-      width={200}
-      height={200}
+      width={100}
+      height={70}
     />
   );
 }

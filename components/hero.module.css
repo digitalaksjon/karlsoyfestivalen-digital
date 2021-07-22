@@ -52,6 +52,7 @@
   backdrop-filter: blur(10px);
   background-color: rgba(253, 251, 249, 0.2);
   border:2px dashed #FDFBF9;
+  padding: 20px;
    
 }
 
@@ -170,11 +171,14 @@
 
   .hero {
     font-size: 100px;
+ 
     line-height: 1;
     font-weight: 800;
     margin: 40px 40px;
     text-shadow: 4px 4px #FDFBF9;
   }
+
+
   .metawrapper {
     flex-direction: row;
   }
@@ -196,7 +200,8 @@
     display: block;
     margin: 40px auto;
   }
-  
+
+
   .iframes {
     width: 70%;
 

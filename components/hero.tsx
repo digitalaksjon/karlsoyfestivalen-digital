@@ -18,6 +18,8 @@ import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
 import cn from 'classnames';
 import styles from './hero.module.css';
 import styleUtils from './utils.module.css';
+import Image from 'next/image';
+import image from '../public/plakat.png';
 
 export default function Hero() {
   return (
@@ -33,9 +35,15 @@ export default function Hero() {
           <strong>I DIGITALE KANALER</strong>
         </p>
       </div>
-      <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
-        <div>Mari Boine <span>|</span> Polardegos <span>|</span> Jan Steigen <span>|</span>  Ohnesorg <span>|</span>  Roastfish & Cornbread Sound System <span>|</span>  MoE <span>|</span>  Hotbox <span>|</span>  One Family <span>|</span>  Kunstnerkollektivet Støy <span>|</span>  Barnemakt <span>|</span>  Jemterud / Brungot / Trio <span>|</span>  Bens Bluesband <span>|</span> Plantefargingsverksted og Grafittiworkshop <span>|</span> Støy!Video  <span>|</span> Postkortutstilling  <span>|</span> Barnas Natur, Grill Og Vill Gourmet Restaurant og mye mer!
-</div>
+        <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
+           <img
+              alt="Plakat 2021"
+              title="Plakat 2021"
+              src={image}
+              className={styles.image}
+           
+
+            />
       </h1>
       <h2
         className={cn(
