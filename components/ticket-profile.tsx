@@ -20,7 +20,6 @@ import cn from 'classnames';
 import IconAvatar from './icons/icon-avatar';
 import { EditText } from 'react-edit-text';
 import 'react-edit-text/dist/index.css';
-import CardProfile from '@components/CardProfile'
 import styles from './ticket-profile.module.css';
 
 
