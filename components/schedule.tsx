@@ -66,6 +66,26 @@ import Header from '@components/header';
 export default function Schedule({ allStages }: Props) {
   return (
     <div className={styles.container}>
+      <Header hero="Søndag 1. august" description="" />
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' && stage.name != 'Galleriet' && stage.name != 'Festivalplassen') 
+          return      ( <StageRow key={stage.slug} stage={stage} day="1" />)       
+        }
+          
+        )}
+      </div>
+      <Header hero="Mandag 2. august" description="" />
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' && stage.name != 'Galleriet' && stage.name != 'Festivalplassen') 
+          return      ( <StageRow key={stage.slug} stage={stage} day="2" />)       
+        }
+          
+        )}
+      </div>
       <Header hero="Tirsdag 3. august" description="" />
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
