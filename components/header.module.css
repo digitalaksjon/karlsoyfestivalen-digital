@@ -39,5 +39,9 @@
 
   .description {
     margin-left: var(--space-8x);
+  
+      max-width: 60%;
+
+    
   }
 }

@@ -32,7 +32,7 @@
  export default function SchedulePage({ allStages }: Props) {
    const meta = {
      title: 'Sendeplan - Karlsøyfestivalen Digital',
-     description: "Her finner du en oversikt over hva som sendes når."
+     description: "Her finner du en oversikt over hva som skjer og når det skjer. Festivalplassen er vår digitale festivalplass, På Karlsøya er det som skjer fysisk på øya og Storscena er konserter som du kan se med digital billett."
    };
  
    return (

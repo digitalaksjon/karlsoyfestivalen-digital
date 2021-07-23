@@ -18,10 +18,20 @@
   margin-bottom: 24px;
 }
 
+
 .time {
   color: var(--secondary-color);
   margin: 0 0 var(--space-2x);
 }
+
+.time:hover {
+  background-color: #F0604C;
+  color: white !important;
+
+
+}
+
+
 
 .card {
   color: inherit;

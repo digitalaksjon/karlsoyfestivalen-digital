@@ -61,6 +61,7 @@
   margin-right: 24px;
 }
 
+
 @media (min-width: 500px) {
   .container {
     border-top: 1px solid var(--accents-7);
