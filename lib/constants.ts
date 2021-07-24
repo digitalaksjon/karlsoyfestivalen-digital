@@ -31,16 +31,16 @@ export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
 
   {
-    name: 'Nyheter',
-    route: '/nyheter'
+    name: 'Program',
+    route: '/sendeplan'
   },
   {
-    name: 'Program',
+    name: 'Innhold',
     route: '/program'
   },
   {
-    name: 'Sendeplan',
-    route: '/sendeplan'
+    name: 'Nyheter',
+    route: '/nyheter'
   },
   {
     name: 'Deltaker',
