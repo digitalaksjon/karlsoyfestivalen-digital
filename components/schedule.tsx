@@ -70,7 +70,7 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-          if (stage.name != 'Storscena (online)' && stage.name != 'Galleriet' && stage.name != 'Festivalplassen (online)') 
+          if (stage.name != 'Storscena (online)' && stage.name != 'Festivalplassen (online)') 
           return      ( <StageRow key={stage.slug} stage={stage} day="1" />)       
         }
           
@@ -80,7 +80,7 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-          if (stage.name != 'Storscena (online)' && stage.name != 'Galleriet' && stage.name != 'Festivalplassen (online)') 
+          if (stage.name != 'Storscena (online)' && stage.name != 'Festivalplassen (online)') 
           return      ( <StageRow key={stage.slug} stage={stage} day="2" />)       
         }
           
@@ -90,7 +90,7 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-          if (stage.name != 'Storscena (online)' && stage.name != 'Galleriet' ) 
+          if (stage.name != 'Storscena (online)' ) 
           return      ( <StageRow key={stage.slug} stage={stage} day="3" />)       
         }
           
@@ -102,7 +102,7 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-          if (stage.name != 'Storscena (online)' && stage.name != 'Galleriet' ) 
+          if (stage.name != 'Storscena (online)' ) 
           return      ( <StageRow key={stage.slug} stage={stage} day="4" />)       
         }
           
@@ -142,7 +142,7 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-          if (stage.name != 'Storscena (online)' && stage.name != 'Galleriet' ) 
+          if (stage.name != 'Storscena (online)' ) 
           return      ( <StageRow key={stage.slug} stage={stage} day="8" />)       
         }
           
