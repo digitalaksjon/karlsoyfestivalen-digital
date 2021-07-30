@@ -14,7 +14,9 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "order-documents"
+    "order-documents",
+    "@sanity/dashboard",
+    "dashboard-widget-vercel"
   ],
   "env": {
     "development": {
@@ -27,6 +29,10 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "dashboardConfig.js"
     }
   ]
 }
