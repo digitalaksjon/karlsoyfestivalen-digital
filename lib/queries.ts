@@ -109,6 +109,23 @@ export const getAllStagesQuery = groq`*[_type == "stage"]{
         }
       }`
 
+      export const getOnIslandQuery = groq`*[_type == "stage" && slug == 'deltaker-pa-karlsoya']{
+        name,
+        "slug": slug.current,
+        stream,
+        discord,
+        schedule[]->{
+          title,
+          start,
+          end,
+          description,
+          speakers[]->{
+            name,
+            "slug": slug.current,
+            image
+          }
+        }
+      }`
 export const getAllSponsorsQuery = groq`*[_type == "company"]{
         name,
         description,

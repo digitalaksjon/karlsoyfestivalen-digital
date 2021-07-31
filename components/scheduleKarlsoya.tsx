@@ -66,12 +66,32 @@ import Header from '@components/header';
 export default function Schedule({ allStages }: Props) {
   return (
     <div className={styles.container}>
+      <Header hero="Søndag 1. august" description="" />
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+   
+          if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
+          return      ( <StageRow key={stage.slug} stage={stage} day="1" />)       
+        }
+        )}
+      </div>
+
+      <Header hero="Mandag 2. august" description="" />
+      <div className={styles['row-wrapper']}>
+        {allStages.map(stage => {
+  
+          if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
+          return      ( <StageRow key={stage.slug} stage={stage} day="2" />)       
+        }
+          
+        )}
+      </div>
 
       <Header hero="Tirsdag 3. august" description="" />
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-          if (stage.name != 'Storscena' && stage.name != 'På Karlsøya' ) 
+          if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
           return      ( <StageRow key={stage.slug} stage={stage} day="3" />)       
         }
           
@@ -83,8 +103,8 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-        if (stage.name != 'Storscena' && stage.name != 'På Karlsøya' ) 
-        return      ( <StageRow key={stage.slug} stage={stage} day="4" />)       
+          if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
+          return      ( <StageRow key={stage.slug} stage={stage} day="4" />)       
         }
           
         )}
@@ -95,9 +115,10 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
         {allStages.map(stage => {
   
-      if (stage.name != 'Storscena' && stage.name != 'På Karlsøya' ) 
-      return      ( <StageRow key={stage.slug} stage={stage} day="5" />)       
-            }
+        if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
+        return      ( <StageRow key={stage.slug} stage={stage} day="5" />)       
+       
+        }
           
         )}
       </div>
@@ -107,35 +128,37 @@ export default function Schedule({ allStages }: Props) {
       <div className={styles['row-wrapper']}>
       {allStages.map(stage => {
   
-        if (stage.name != 'På Karlsøya' ) 
+        if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
         return      ( <StageRow key={stage.slug} stage={stage} day="6" />)       
+      
         }
           
-        )}
-      </div>
+        )}      
+    </div>
 
       <Header hero="Lørdag 7. august" description="" />
 
       <div className={styles['row-wrapper']}>
       {allStages.map(stage => {
   
-  if (stage.name != 'På Karlsøya' ) 
-  return      ( <StageRow key={stage.slug} stage={stage} day="7" />)       
-  }
-    
-  )}
+        if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
+        return      ( <StageRow key={stage.slug} stage={stage} day="7" />)       
+      
+        }
+          
+        )}
       </div>
-
       <Header hero="Søndag 8. august" description="" />
 
       <div className={styles['row-wrapper']}>
       {allStages.map(stage => {
   
-  if (stage.name != 'Storscena' && stage.name != 'På Karlsøya' ) 
-  return      ( <StageRow key={stage.slug} stage={stage} day="8" />)       
-  }
-    
-  )}
+          if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
+          return      ( <StageRow key={stage.slug} stage={stage} day="8" />)       
+        
+          }
+            
+          )}
       </div>
     </div>
   );

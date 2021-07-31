@@ -31,11 +31,11 @@ export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
 
   {
-    name: 'Program',
+    name: 'Sendeplan',
     route: '/sendeplan'
   },
   {
-    name: 'Innhold',
+    name: 'Bidragsytere',
     route: '/program'
   },
   {
@@ -45,6 +45,10 @@ export const NAVIGATION = [
   {
     name: 'Deltaker',
     route: '/nyheter/karlsoyfestivalen-en-annerledes-opplevelse'
+  },
+  {
+    name: 'På Karlsøya',
+    route: '/pakarlsoya'
   },
   {
     name: 'Fellesskap',

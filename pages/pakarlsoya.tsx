@@ -17,7 +17,7 @@
  import { GetStaticProps } from 'next';
 
  import Page from '@components/page';
- import Schedule from '@components/schedule';
+ import Schedule from '@components/scheduleKarlsoya';
  import Layout from '@components/layout';
  import Header from '@components/header';
  
