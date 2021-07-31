@@ -40,6 +40,8 @@ export default function SpeakerSection({ speaker }: Props) {
       mainImage: image
     }
   }
+
+
   return (
     <>
       <Link href="/program">
