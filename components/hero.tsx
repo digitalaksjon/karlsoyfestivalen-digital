@@ -63,7 +63,7 @@ export default function Hero() {
     
 
       </div>
-      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], stylesMenu.metawrapper)}>
+      <div className={cn(styleUtils.appear, styles.anothermenu, styleUtils['appear-fourth'], stylesMenu.metawrapper)}>
       <div >
               {NAVIGATION.map(({ name, route }) => (
                 <Link key={name} href={route}>
