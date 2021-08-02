@@ -17,8 +17,7 @@
 .wrapper {
   margin-top: var(--space-12x);
   width: 100%;
-  margin: 30vh auto;
-
+ 
 }
 
 
@@ -34,11 +33,28 @@
   
   padding: 30px 0;
   
-  
-  
-  
+
 }
 
+
+.tab {
+  background: #FDFBF9;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  text-transform: uppercase;
+  padding: var(--space-4x);
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-align:center;
+  justify-content: center;
+}
 
 .hero {
   font-size: 40px;
@@ -165,6 +181,11 @@
 
 @media (min-width: 1025px) {
 
+
+  .tab {
+    width: 20%;
+  }
+
   .wrapper {
     margin-top: var(--space-12x);
     width: 100%;
@@ -241,3 +262,4 @@
     
   }
 }
+

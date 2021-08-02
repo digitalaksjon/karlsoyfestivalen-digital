@@ -20,8 +20,15 @@ import styles from './hero.module.css';
 import styleUtils from './utils.module.css';
 import Image from 'next/image';
 import image from '../public/plakat.png';
+import { NAVIGATION } from '@lib/constants';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import stylesMenu from './layout.module.css';
 
 export default function Hero() {
+  const router = useRouter();
+  const activeRoute = router.asPath;
+
   return (
     <div className={styles.wrapper}>
       <h1 className={cn(styleUtils.appear, styleUtils['appear-first'], styles.brand)}>
@@ -56,8 +63,20 @@ export default function Hero() {
     
 
       </div>
-      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.metawrapper)}>
-        
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], stylesMenu.metawrapper)}>
+      <div >
+              {NAVIGATION.map(({ name, route }) => (
+                <Link key={name} href={route}>
+                  <a
+                    className={cn(styles.tab, {
+                      [stylesMenu['tab-active']]: activeRoute.startsWith(route)
+                    })}
+                  >
+                    {name}
+                  </a>
+                </Link>
+              ))}
+            </div>
       </div>
     </div>
   );
