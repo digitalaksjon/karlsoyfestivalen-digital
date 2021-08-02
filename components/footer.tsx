@@ -22,10 +22,14 @@ export default function Footer() {
     <footer className={cn(styles.footer)}>
       <div className={styles['footer-legal']}>
         <div className={styles['footer-hostedby']}>
-          <HostedByVercel />
+
           <div className={styles['footer-separator']} />
         </div>
         <div className={styles['footer-copyright']}>
+        E-post: info@karlsoyfestivalen.no<br />
+          Telefon: +47 940 39 499
+          <br />
+
           {`${new Date().getFullYear()} `} {COPYRIGHT_HOLDER || `${SITE_NAME}.`}
         </div>
        

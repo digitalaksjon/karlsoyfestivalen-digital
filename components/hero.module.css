@@ -87,6 +87,7 @@
   color: #FDFBF9;
   background-color: #F0604C;
   width:100%;
+      padding: 5px 10px;
   margin: 0 auto;
 
 }
@@ -219,6 +220,8 @@
     font-size: 24px;
     margin-bottom: 80px;
     width: 80%;
+
+    
     
   }
 
