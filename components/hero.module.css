@@ -56,6 +56,11 @@
   justify-content: center;
 }
 
+.tab:hover {
+  background:#F0604C;
+  color: #FDFBF9;
+}
+
 .hero {
   font-size: 40px;
   line-height: 1.15;
