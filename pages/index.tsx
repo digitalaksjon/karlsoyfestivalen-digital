@@ -43,9 +43,7 @@ import image6 from '../public/bakgrunn6.jpg';
 import image7 from '../public/bakgrunn7.jpg';
 import image8 from '../public/bakgrunn8.jpg';
 
-const imageArray = [image1, image2, image3, image4];
-
-const randomImageArray = shuffle(imageArray);
+const imageArray = [image3,image4];
 
 type Props = {
   children: React.ReactNode;
@@ -80,7 +78,7 @@ export default function Conf({posts}:Props) {
       <SkipNavContent />
 
     {loaded &&
-      <BackgroundSlideshow images={randomImageArray} animationDelay={12000} />
+      <BackgroundSlideshow images={imageArray} animationDelay={12000} />
       }
         
       <ConfContent

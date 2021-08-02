@@ -24,11 +24,11 @@ import image from '../public/plakat.png';
 export default function Hero() {
   return (
     <div className={styles.wrapper}>
-      <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.brand)}>
+      <h1 className={cn(styleUtils.appear, styleUtils['appear-first'], styles.brand)}>
         Velkommen til <br />
         {BRAND_NAME}
       </h1>
-      <div className={cn(styleUtils.appear, styleUtils['appear-first'], styles.info)}>
+      <div className={cn(styleUtils.appear, styleUtils['appear-second'], styles.info)}>
         <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
@@ -46,27 +46,16 @@ export default function Hero() {
       >
         {SITE_DESCRIPTION}
       </h2>
-      <div className={cn(styleUtils.appear, styleUtils['appear-forth'], styles.metawrapper)}>
-        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 2% 0 0' }}><iframe src="https://player.vimeo.com/video/576294789?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Minner fra Karls&amp;oslash;yfestivalen 2020"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-        <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.manifest)}>
-          <div className={cn(styles.inner_manifest)}>
-            <h2>KARLSØYFESTIVALENS MANIFEST</h2>
-
-            <div>
-              Karlsøyfestivalen er ei markering av motstand mot et samfunn der de viktigste verdiene er lønnsomhet, konkurranse og grådighet. Den er en protest mot raseringen av distriktene, miljøødeleggelsene, rasisme og diskriminering. Den protesterer mot kolonialismen, utbyttinga og den brutale undertrykkinga av verdens folk.
-            </div>
-
-            <div>
-              Karlsøyfestivalen er en fest for og ei feiring av alle positive motkrefter! Den skal gjenspeile, gjenskape og fremme alle de alternative kreftene som kjemper for en annen og bedre verden preget av solidaritet, medfølelse og kjærlighet!
-
-            </div>
-          </div>
-
+      <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.metawrapper)}>
+        <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 0 2% 0' }}>
+          <iframe src="https://vimeo.com/event/1145417/embed" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Karlsøyfestivalen 2021">
+          
+          </iframe>
         </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
+    
 
-      </div>
-
+         </div>
     </div >
-
   );
 }
