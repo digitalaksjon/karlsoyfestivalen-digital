@@ -43,7 +43,7 @@ import image6 from '../public/bakgrunn6.jpg';
 import image7 from '../public/bakgrunn7.jpg';
 import image8 from '../public/bakgrunn8.jpg';
 
-const imageArray = [image1, image2, image3, image4, image5, image6, image7, image8];
+const imageArray = [image1, image2, image3, image4];
 
 const randomImageArray = shuffle(imageArray);
 

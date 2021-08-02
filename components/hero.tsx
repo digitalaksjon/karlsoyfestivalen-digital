@@ -35,16 +35,7 @@ export default function Hero() {
           <strong>I DIGITALE KANALER</strong>
         </p>
       </div>
-        <h1 className={cn(styleUtils.appear, styleUtils['appear-second'], styles.hero)}>
-           <img
-              alt="Plakat 2021"
-              title="Plakat 2021"
-              src={image}
-              className={styles.image}
-           
 
-            />
-      </h1>
       <h2
         className={cn(
           styleUtils.appear,
