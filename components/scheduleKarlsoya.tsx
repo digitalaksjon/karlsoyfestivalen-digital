@@ -68,16 +68,7 @@ export default function Schedule({ allStages }: Props) {
     <div className={styles.container}>
 
 
-      <Header hero="Mandag 2. august" description="" />
-      <div className={styles['row-wrapper']}>
-        {allStages.map(stage => {
-  
-          if (stage.name != 'Storscena' && stage.name != 'Festivalplassen') 
-          return      ( <StageRow key={stage.slug} stage={stage} day="2" />)       
-        }
-          
-        )}
-      </div>
+
 
       <Header hero="Tirsdag 3. august" description="" />
       <div className={styles['row-wrapper']}>
