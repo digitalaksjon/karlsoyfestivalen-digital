@@ -41,6 +41,23 @@
      <Page meta={meta}>
        <Layout>
          <Header hero="Deltaker på Karlsøya" description={meta.description} />
+         <p style={{margin:'var(--space-16x) var(--space-8x) var(--space-4x)'}}>
+         Nå er det rett før vi åpner for en ny type festivalopplevelse på Karlsøya.
+
+
+Opplevelsen her på Karlsøya vil bestå av at vi i fellesskap skaper de digitale opplevelsene samtidig som vi skaper gode opplevelser for hverandre og koser oss sammen.
+
+Frokostmøtene som er kl. 12 hver dag er noe det viktigste som skjer på hele festivalen. Da spiser vi mat og snakker om hva som skal skje iløpet av dagen.
+
+Viktige arbeidsoppgaver vil være å skape infrastruktur med presseninger og annet slik at vi kan ha ly om det blir dårlig vær, skaffe ved til bål, trivsel, sikkerhet og smittevern. I tillegg er det en hel haug med andre oppgaver, og disse snakker vi om morgenmøtene.
+
+Det er ikke krav om at du jobber noe spesielt antall timer, bare at du bidrar og deltar med det du har lyst til.
+
+
+Programmet vil i all hovedsak presenteres digitalt. Dere som kommer til øya vil få tilgang til alt det digitale innholdet når dere kommer hjem.
+
+ 
+         </p>
          <Schedule allStages={allStages} />
        </Layout>
      </Page>
