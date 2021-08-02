@@ -40,7 +40,7 @@
     return (
      <Page meta={meta}>
        <Layout>
-         <Header hero="Deltaker på Karsøya" description={meta.description} />
+         <Header hero="Deltaker på Karlsøya" description={meta.description} />
          <Schedule allStages={allStages} />
        </Layout>
      </Page>
