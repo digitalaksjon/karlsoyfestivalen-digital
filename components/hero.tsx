@@ -55,7 +55,10 @@ export default function Hero() {
           <script src="https://player.vimeo.com/api/player.js"></script>
     
 
-         </div>
-    </div >
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.metawrapper)}>
+        
+      </div>
+    </div>
   );
 }
