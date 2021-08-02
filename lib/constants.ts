@@ -43,13 +43,10 @@ export const NAVIGATION = [
     route: '/nyheter'
   },
   {
-    name: 'Deltaker',
-    route: '/nyheter/karlsoyfestivalen-en-annerledes-opplevelse'
-  },
-  {
-    name: 'På Karlsøya',
+    name: 'Deltaker på Karsløya',
     route: '/pakarlsoya'
   },
+
   {
     name: 'Fellesskap',
     route: '/samarbeid'

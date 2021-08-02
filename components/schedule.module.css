@@ -68,12 +68,14 @@
     margin-top: var(--space-4x);
     display: flex;
     flex-direction: column;
+    width:fit-content;
   }
 
   .row {
     margin: 0 var(--space-8x) 0 0;
     flex-direction: row;
     padding: var(--space-8x) 0;
+
   }
 
   .talks {

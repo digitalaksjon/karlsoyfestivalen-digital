@@ -31,7 +31,7 @@
  
  export default function SchedulePage({ allStages }: Props) {
    const meta = {
-     title: 'Sendeplan og program for Karlsøyfestivalen Digital',
+     title: 'Program for deltakere på Karlsøyfestivalen ',
      description: "Her finner du en oversikt over hva som skjer og når det skjer på Karsløya. Vi tar forbehold om endringer i programmet."
    };
 
@@ -40,7 +40,7 @@
     return (
      <Page meta={meta}>
        <Layout>
-         <Header hero="Sendeplan" description={meta.description} />
+         <Header hero="Deltaker på Karsøya" description={meta.description} />
          <Schedule allStages={allStages} />
        </Layout>
      </Page>
