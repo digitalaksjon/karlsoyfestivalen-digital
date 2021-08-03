@@ -166,3 +166,8 @@ svg circle {
   border-bottom: 10px solid #F0604C
 }
 
+@media screen and (min-width:1024px) {
+  .deltakerDesc {
+    width: 70%;
+  }
+}

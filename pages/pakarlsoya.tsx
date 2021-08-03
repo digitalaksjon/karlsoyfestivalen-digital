@@ -41,7 +41,7 @@
      <Page meta={meta}>
        <Layout>
          <Header hero="Deltaker på Karlsøya" description={meta.description} />
-         <p style={{margin:'var(--space-16x) var(--space-8x) var(--space-4x)'}}>
+         <p style={{margin:'var(--space-16x) var(--space-8x) var(--space-4x)'}} className="deltakerDesc">
          Nå er det rett før vi åpner for en ny type festivalopplevelse på Karlsøya.
 
 
