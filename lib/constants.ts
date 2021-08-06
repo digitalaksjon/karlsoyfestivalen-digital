@@ -46,6 +46,10 @@ export const NAVIGATION = [
     name: 'Deltaker på Karsløya',
     route: '/pakarlsoya'
   },
+  {
+        name: 'Støy!Video',
+      route: '/nyheter/stoy-video-nyhet'
+  },
 
   {
     name: 'Fellesskap',
