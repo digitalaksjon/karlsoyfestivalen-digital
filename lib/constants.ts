@@ -48,7 +48,7 @@ export const NAVIGATION = [
   },
   {
         name: 'Støy!Video',
-      route: '/nyheter/stoy-video-nyhet'
+      route: '/stoyvideo'
   },
 
   {
