@@ -30,24 +30,17 @@ export const REPO = 'https://github.com/digitalaksjon/karlsoyfestivalen-digital'
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
 
+
   {
-    name: 'Sendeplan',
-    route: '/sendeplan'
+    name: 'Nyheter',
+    route: '/nyheter'
   },
   {
     name: 'Bidragsytere',
     route: '/program'
   },
   {
-    name: 'Nyheter',
-    route: '/nyheter'
-  },
-  {
-    name: 'Deltaker på Karsløya',
-    route: '/pakarlsoya'
-  },
-  {
-        name: 'Støy!Video',
+      name: 'Støy!Video',
       route: '/stoyvideo'
   },
 
