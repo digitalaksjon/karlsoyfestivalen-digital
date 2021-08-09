@@ -40,11 +40,6 @@ export const NAVIGATION = [
     route: '/program'
   },
   {
-      name: 'Støy!Video',
-      route: '/stoyvideo'
-  },
-
-  {
     name: 'Fellesskap',
     route: '/samarbeid'
   }
