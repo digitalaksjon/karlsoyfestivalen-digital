@@ -43,6 +43,8 @@ import image6 from '../public/bakgrunn6.jpg';
 import image7 from '../public/bakgrunn7.jpg';
 import image8 from '../public/bakgrunn8.jpg';
 
+import shareImage from '../public/digitalshareimage.png'
+
 const imageArray = [image3,image4,image5,image6,image7,image8];
 
 type Props = {
@@ -58,12 +60,14 @@ export interface ConfProps {
   instagramPosts: any[];
 }
 
+
+
 export default function Conf({posts}:Props) {
   const { query } = useRouter();
   const meta = {
     title: 'Karlsøyfestivalen Digital',
     description: META_DESCRIPTION,
-    image: "https://karlsoyfestivalen-digital.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fy36fur6j%2Fproduction%2Ff24bbebf1b08d8d5435712c6e11b98043f0a19bc-1280x850.jpg%3Frect%3D0%2C69%2C1280%2C711%26w%3D900%26h%3D500&w=1920&q=75"
+    image: shareImage
   };
   const ticketNumber = query.ticketNumber?.toString();
   const defaultUserData = {
