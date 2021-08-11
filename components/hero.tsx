@@ -55,13 +55,12 @@ export default function Hero() {
       </h2>
       <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.metawrapper)}>
         <div className={cn(styles.iframes)} style={{ padding: '56.25% 0 0 0', position: 'relative', margin: '0 0 2% 0' }}>
-          <iframe src="https://vimeo.com/event/1145417/embed" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Karlsøyfestivalen 2021">
+          <iframe src="https://vimeo.com/showcase/8563411/embed" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '70%', border: '2px dashed #fff', padding: '10px' }} title="Karlsøyfestivalen 2021">
           
           </iframe>
-        </div>
           <script src="https://player.vimeo.com/api/player.js"></script>
-    
-
+        </div>
+          
       </div>
       <div className={cn(styleUtils.appear, styles.anothermenu, styleUtils['appear-fourth'], stylesMenu.metawrapper)}>
       <div >
