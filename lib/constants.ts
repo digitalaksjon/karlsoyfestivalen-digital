@@ -31,7 +31,7 @@ export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
 
   {
-    name: 'Digital',
+    name: 'Digitalt innhold',
     route: 'https://vimeo.com/showcase/karloyfestivalendigital'
   },
   {
