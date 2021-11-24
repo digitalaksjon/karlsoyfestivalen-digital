@@ -39,8 +39,20 @@ export const NAVIGATION = [
     route: '/nyheter'
   },
   {
+    name: 'Festivalplassen',
+    route: '/stage/festivalplassen'
+  },
+  {
+    name: 'Storscena',
+    route: '/stage/storscena'
+  },
+  {
     name: 'Bidragsytere',
     route: '/program'
+  },
+  {
+    name: 'Galleriet',
+    route: '/stage/galleriet'
   },
   {
     name: 'Fellesskap',

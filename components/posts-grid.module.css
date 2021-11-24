@@ -83,7 +83,7 @@
 @media (min-width: 768px) {
   .grid {
     padding: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 24%));
+    grid-template-columns: repeat(auto-fill, minmax(307px, 24%));
   }
 
   .card {
